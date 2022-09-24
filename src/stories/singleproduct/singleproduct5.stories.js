@@ -3,7 +3,7 @@ import React from "react";
 import Singleproduct5 from "../../components/singleProduct/singleproduct5";
 
 export default {
-  title: "Singleproduct5",
+  title: "Singleproduct/Singleproduct5",
   component: Singleproduct5,
 };
 

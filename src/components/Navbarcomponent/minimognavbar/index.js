@@ -21,8 +21,11 @@ export default function Minimognavbar() {
     setMenubar(!menubar);
   };
   return (
-    <div className="menybar font-Jost">
-      <div className="flex justify-center text-[14px] text-[#445b55] p-2 bg-[#cfe9e1]">
+    <div className="menybar font-minimog-theme-font">
+      <div
+        className="flex justify-center text-[14px]
+       text-minimog-theme-topbar-title-color p-2 bg-minimog-theme-topbar-bg-color"
+      >
         <h3 className="uppercase font-[500]">
           cool new color: sterling so worth it
         </h3>
@@ -35,7 +38,7 @@ export default function Minimognavbar() {
             alt=""
           />
         </div>
-        <div className="item text-center   w-[50%] ">
+        <div className="item text-center text-minimog-theme-menu-title-color  w-[50%] ">
           <div className="nav ">
             <ul
               className="flex space-x-8 
@@ -167,7 +170,7 @@ export default function Minimognavbar() {
             </ul>
           </div>
         </div>
-        <div className="item  w-[25%] text-[25px] ">
+        <div className="item  w-[25%] text-[25px] text-minimog-theme-menu-icon-color">
           <div className="mt-3 flex  justify-center space-x-8">
             <div className="">
               <FaRegUser className="text-[23px]" />
@@ -178,8 +181,8 @@ export default function Minimognavbar() {
             <div className="bdg relative">
               <FaRegStar />
               <div
-                className="bg-[#DA3F3F] -top-2 right-0
-               left-4 bottom-2 absolute text-[13px] font-[800]  rounded-full text-white w-[20px] text-center h-[20px] "
+                className="bg-minimog-theme-menu-icon-number-bg-color -top-2 right-0
+               left-4 bottom-2 absolute text-[13px] font-[800]  rounded-full text-minimog-theme-menu-icon-number-color w-[20px] text-center h-[20px] "
               >
                 <h3 className="text-center "> 0</h3>
               </div>
@@ -188,8 +191,8 @@ export default function Minimognavbar() {
               {" "}
               <MdOutlineShoppingBag />
               <div
-                className="bg-[#DA3F3F] -top-2 right-0
-               left-4 bottom-2 absolute text-[13px] font-[800]  rounded-full text-white w-[20px] text-center h-[20px] "
+                className="bg-minimog-theme-menu-icon-number-bg-color -top-2 right-0
+               left-4 bottom-2 absolute text-[13px] font-[800]  rounded-full text-minimog-theme-menu-icon-number-color w-[20px] text-center h-[20px] "
               >
                 <h3 className="text-center "> 0</h3>
               </div>
@@ -220,8 +223,8 @@ export default function Minimognavbar() {
                 {" "}
                 <MdOutlineShoppingBag className="text-[25px]" />
                 <div
-                  className="bg-[#DA3F3F] -top-2 right-0
-               left-4 bottom-2 absolute text-[13px] font-[800]  rounded-full text-white w-[20px] text-center h-[20px] "
+                  className="bg-minimog-theme-menu-icon-number-bg-color -top-2 right-0
+               left-4 bottom-2 absolute text-[13px] font-[800]  rounded-full text-minimog-theme-menu-title-color w-[20px] text-center h-[20px] "
                 >
                   <h3 className="text-center "> 0</h3>
                 </div>
@@ -244,7 +247,7 @@ export default function Minimognavbar() {
                 : "hidden -left-[80px]"
             }
           >
-            <ul className="space-y-8 justify-center mt-5 ">
+            <ul className="space-y-8 justify-center mt-5 text-minimog-theme-menu-title-color">
               <li className=" dropdown">
                 <a href="">Home</a>
                 <ul className="dropdown-menu">
@@ -271,12 +274,12 @@ export default function Minimognavbar() {
               <input
                 type="button"
                 value="Login"
-                className="w-full rounded-md bg-black text-white p-2"
+                className="w-full rounded-md bg-minimog-theme-button-bg-color text-minimog-theme-default-title-color p-2"
               />
               <input
                 type="button"
                 value="Register"
-                className="w-full rounded-md border text-black border-black  p-2"
+                className="w-full rounded-md border text-minimog-theme-button-title-color border-minimog-theme-border-color  p-2"
               />
             </div>
           </div>

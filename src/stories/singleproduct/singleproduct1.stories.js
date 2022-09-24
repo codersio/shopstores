@@ -1,7 +1,7 @@
 import React from "react";
 import Singleproduct1 from "../../components/singleProduct/singleproduct1";
 export default {
-  title: "Singleproduct1",
+  title: "Singleproduct/Singleproduct1",
   component: Singleproduct1,
 };
 

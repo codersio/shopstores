@@ -27,15 +27,15 @@ export default function Leonavbar() {
     setMenubar(!menubar);
   };
   return (
-    <div className="menybar font-Jost">
-      <Loginmodal />
+    <div className="menybar font-leo-theme-font">
+      {/* <Loginmodal /> */}
       <div className="topbar md:flex hidden p-4 pl-28 pr-28 justify-between  border bg-black">
-        <div className="item flex space-x-3 text-[13px] text-[#ccc]">
+        <div className="item flex space-x-3 text-[13px] text-leo-theme-topmenu-title-color">
           <div className="icon flex space-x-2  ">
             <ul className="flex space-x-4">
               <li className="flex space-x-3">
                 <a href="">Hello welcome to our store</a>
-                <div className="w-[1px] h-[1rem] mt-1 bg-[#ccc] "></div>
+                <div className="w-[1px] h-[1rem] mt-1 bg-leo-theme-topmenu-title-color "></div>
               </li>
               <li className="flex space-x-3">
                 <a href="" className="flex space-x-2">
@@ -48,7 +48,7 @@ export default function Leonavbar() {
             </ul>
           </div>
         </div>
-        <div className="item flex space-x-3 text-[13px] text-[#ccc]">
+        <div className="item flex space-x-3 text-[13px] text-leo-theme-topmenu-title-color">
           <div className="icon flex space-x-2  ">
             <ul className="flex space-x-4 uppercase">
               <li className="flex space-x-3">
@@ -58,7 +58,7 @@ export default function Leonavbar() {
                   </div>
                   <h3>Sign in</h3>
                 </a>
-                <div className="w-[1px] h-[1rem] mt-1 bg-[#ccc] "></div>
+                <div className="w-[1px] h-[1rem] mt-1 bg-leo-theme-topmenu-title-color "></div>
               </li>
               <li className="flex space-x-3">
                 <a href="" className="flex space-x-2">
@@ -67,14 +67,14 @@ export default function Leonavbar() {
                   </div>
                   <h3>compare</h3>
                 </a>
-                <div className="w-[1px] h-[1rem] mt-1 bg-[#ccc] "></div>
+                <div className="w-[1px] h-[1rem] mt-1 bg-leo-theme-topmenu-title-color "></div>
               </li>
               <li className="flex space-x-3">
                 <a href="" className="flex space-x-2">
                   <div>{/* <FontAwesomeIcon icon={faLock} /> */}</div>
                   <h3>currency</h3>
                 </a>
-                <div className="w-[1px] h-[1rem] mt-1 bg-[#ccc] "></div>
+                <div className="w-[1px] h-[1rem] mt-1 bg-leo-theme-topmenu-title-color "></div>
               </li>
               <li className="flex space-x-3">
                 <a href="" className="flex space-x-2">
@@ -86,20 +86,26 @@ export default function Leonavbar() {
           </div>
         </div>
       </div>
-      <div className=" pl-20 shadow-lg  pr-20 md:flex hidden minimog-nav  bg-white p-4 space-x-6 w-full">
-        <div className="item">
+      <div
+        className=" pl-20 shadow-lg  pr-20 md:flex
+       hidden minimog-nav justify-center  bg-white p-4 space-x-6 w-full"
+      >
+        <div className="item grid place-items-center">
           <img
-            className="w-[55%] ml-10"
-            src="https://minimog-4437.kxcdn.com/wp-content/themes/minimog/assets/images/logo/dark-logo.png"
+            className=" ml-10"
+            src="https://demo1.leotheme.com/leo_wooden_demo/img/leo-wooden-prestashop-17-logo-1520843277.jpg"
             alt=""
           />
         </div>
-        <div className="item     w-[50%] ">
+        <div className="item  grid place-items-center     w-[50%] ">
           <div className="nav ">
-            <ul className="flex uppercase space-x-8  mt-2 text-[16px] font-[500]">
+            <ul
+              className="flex uppercase 
+            space-x-8  mt-2 text-[15px] text-leo-theme-menu-color font-[500]"
+            >
               <li className="dropdown">
                 <p>Home</p>
-                <div className="dropdown-menu text-[#000] font-[600] space-x-80  p-10 w-full left-0 shadow-xl hidden  right-0 bg-white absolute">
+                <div className="dropdown-menu text-leo-theme-menu-color font-[600] space-x-80  p-10 w-full left-0 shadow-xl hidden  right-0 bg-white absolute">
                   <div className="item space-y-2 text-center ">
                     <h3>menu1</h3>
                     <ul className="space-y-5">
@@ -210,7 +216,7 @@ export default function Leonavbar() {
           </div>
         </div>
         <div className="item  w-[25%] text-[18px] ">
-          <div className="mt-3 flex  justify-center space-x-8">
+          <div className="mt-3 flex  justify-center space-x-8 text-leo-theme-menu-icon-color">
             {/* <div className="">
               <FontAwesomeIcon icon={faUser} />
             </div> */}
@@ -218,8 +224,8 @@ export default function Leonavbar() {
               <FontAwesomeIcon icon={faSearch} />
             </div>
             <div className="bdg relative">
-              <FontAwesomeIcon icon={faBagShopping} />
-              <div className="bg-[#33c9db] top-0 right-0 left-3 bottom-2 absolute text-[14px] font-[500]  rounded-full text-white w-[20px] text-center h-[20px] ">
+              <FontAwesomeIcon icon={faCartShopping} />
+              <div className="bg-leo-theme-icon-number-color top-0 right-0 left-3 bottom-2 absolute text-[14px] font-[500]  rounded-full text-leo-theme-icon-number-text-color w-[20px] text-center h-[20px] ">
                 <h3 className="text-center "> 0</h3>
               </div>
             </div>
@@ -298,7 +304,7 @@ export default function Leonavbar() {
                 </button>
               </div>
             </div>
-            <ul className="space-y-2 justify-center   p-4">
+            <ul className="space-y-2 justify-center text-leo-theme-menu-color   p-4">
               <li className="flex justify-between border-b p-2">
                 <a href="">Home</a>
                 <FontAwesomeIcon icon={faAngleDown} />

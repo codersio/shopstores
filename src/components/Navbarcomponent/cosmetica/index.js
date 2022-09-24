@@ -18,6 +18,9 @@ import {
   faCartShopping,
   faHeadphones,
 } from "@fortawesome/free-solid-svg-icons";
+import { HiOutlineShoppingBag } from "react-icons/hi";
+import { FiHeart } from "react-icons/fi";
+import { FaRegUser } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../../Font/globalfont.scss";
 import React, { useState } from "react";
@@ -28,10 +31,10 @@ export default function Cosmetica() {
     setMenubar(!menubar);
   };
   return (
-    <div className="menubar font-Quicksand">
+    <div className="menubar font-cosmetica-theme-font">
       <div className=" md:block hidden electro-container font-Inter border-b-2">
         <div className="topbar  justify-between flex border">
-          <div className="item flex space-x-3 text-[13px] text-[#333e48]">
+          <div className="item flex space-x-3 text-[13px] text-cosmetica-theme-navbar-default-title-color">
             <div className="icon flex space-x-2  ">
               <ul className="flex space-x-4">
                 <li className="flex space-x-3 border-r p-3">
@@ -41,7 +44,7 @@ export default function Cosmetica() {
               </ul>
             </div>
           </div>
-          <div className="item flex space-x-3 text-[13px] text-[#333e48]">
+          <div className="item flex space-x-3 text-[13px] text-cosmetica-theme-navbar-default-title-color">
             <div className="icon flex space-x-2  ">
               <ul className="flex space-x-4">
                 <li className="flex space-x-3 border-r border-l p-3">
@@ -66,13 +69,13 @@ export default function Cosmetica() {
             />
           </div>
           <div className="item w-[55%]  ">
-            <div className="input-cat flex rounded-3xl justify-between p-1 w-[100%] border-[#f2f2f3] border">
+            <div className="input-cat flex rounded-3xl justify-between p-1 w-[100%] border-cosmetica-theme-input-border-color border">
               <input
                 type="text"
-                value="Enter ypur product"
-                className="border-none w-[60%] text-[14px] text-[#7e7e7e]"
+                placeholder="Enter ypur product"
+                className="border-none w-[60%] text-[14px] text-cosmetica-theme-input-title-color"
               />
-              <button className=" bg-[#212222] text-[#fff] rounded-3xl  space-x-2 text-[14px] w-[30%] grid place-items-center  p-3  ">
+              <button className=" bg-cosmetica-theme-search-bg-color text-cosmetica-theme-search-title-color rounded-3xl  space-x-2 text-[14px] w-[30%] grid place-items-center  p-3  ">
                 <div className="flex space-x-1">
                   <div>
                     {" "}
@@ -85,32 +88,52 @@ export default function Cosmetica() {
           </div>
 
           <div className="item w-[30%] flex justify-center space-x-10 text-[25px]">
-            <div className="icon flex space-y-1 flex-col relative">
-              <FontAwesomeIcon icon={faUser} className="text-[#7e7e7e]" />
-              <h3 className="text-[13px] font-[500]">My Account</h3>
-              {/* <h3
-                className="bg-[#3bb74e] w-[20px] absolute top-0  right-0 left-3 h-[20px] rounded-full text-[14px] 
-            grid place-items-center font-[600] text-black"
-              >
-                0
-              </h3> */}
-            </div>
-            <div className="icon relative">
-              <div className="flex  flex-col mt-1">
-                <FontAwesomeIcon icon={faHeart} className="text-[#7e7e7e]" />
-                <h3 className="text-[13px] font-[500]">Wishlist</h3>
-              </div>
-            </div>
             <div className="icon relative">
               <div className=" text-center mt-1">
-                <FontAwesomeIcon
-                  icon={faBriefcase}
-                  className="text-[#7e7e7e]"
-                />
-                <h3 className="text-[13px] font-[500] -m-2">Shop Cart</h3>
-                <h3
+                <FaRegUser className="text-cosmetica-theme-navbar-default-icon-color text-[30px]" />
+                <h3 className="text-[13px] text-cosmetica-theme-navbar-default-title-color font-[500] -m-2">
+                  Account
+                </h3>
+                {/* <h3
                   className="bg-[#96ce8b] w-[20px] absolute top-0  right-0  h-[20px] rounded-full text-[14px] 
             grid place-items-center font-[600] text-white"
+                >
+                  0
+                </h3> */}
+              </div>
+            </div>
+
+            <div className="icon relative">
+              <div className=" text-center mt-1">
+                <FiHeart className="text-cosmetica-theme-navbar-default-icon-color text-[30px]" />
+                <h3 className="text-[13px] text-cosmetica-theme-navbar-default-title-color font-[500] -m-2">
+                  Wishlist
+                </h3>
+                {/* <h3
+                  className="bg-[#96ce8b] w-[20px] absolute top-0  right-0  h-[20px] rounded-full text-[14px] 
+            grid place-items-center font-[600] text-white"
+                >
+                  0
+                </h3> */}
+              </div>
+            </div>
+            {/* <div className="icon relative">
+              <div className=" text-center  mt-1">
+                <FiHeart className="text-[#7e7e7e]" />
+                <h3 className="text-[13px] text-cosmetica-theme-navbar-default-title-color font-[500]">
+                  Wishlist
+                </h3>
+              </div>
+            </div> */}
+            <div className="icon relative">
+              <div className=" text-center mt-1">
+                <HiOutlineShoppingBag className="text-cosmetica-theme-navbar-default-icon-color text-[30px]" />
+                <h3 className="text-[13px] text-cosmetica-theme-navbar-default-title-color font-[500] -m-2">
+                  Shop Cart
+                </h3>
+                <h3
+                  className="bg-cosmetica-theme-count-number-bg-color w-[20px] absolute top-0  right-0  h-[20px] rounded-full text-[14px] 
+            grid place-items-center font-[600] text-cosmetica-theme-count-number-title-color"
                 >
                   0
                 </h3>
@@ -121,7 +144,7 @@ export default function Cosmetica() {
 
         <div className="navigation flex justify-center pl-5 space-x-4">
           <div className="item w-[100%]  ">
-            <ul className="flex space-x-11 justify-center p-3 text-[14px] font-[600]">
+            <ul className="flex text-cosmetica-theme-input-title-color space-x-11 justify-center p-3 text-[14px] font-[400]">
               <li>
                 <a href="">Home</a>
               </li>

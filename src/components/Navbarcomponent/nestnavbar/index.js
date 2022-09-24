@@ -33,12 +33,12 @@ export default function Nestnavbar() {
     setMenubar(!menubar);
   };
   return (
-    <div className="menubar font-Quicksand">
+    <div className="menubar font-nest-theme-font">
       <div className=" md:block hidden electro-container font-Quicksand border-b-2">
         <div className="topbar p-2 justify-between flex border">
-          <div className="item flex space-x-3 text-[13px] text-[#333e48]">
+          <div className="item flex space-x-3 text-[13px] text-nest-theme-menu-default-title-color">
             <div className="icon flex space-x-2  ">
-              <ul className="flex space-x-4">
+              <ul className="flex space-x-4 text-nest-theme-menu-default-title-color">
                 <li className="flex space-x-3">
                   <a href="">About Us</a>
                   <div className="w-[1px] h-[1rem] mt-1 bg-[#333e481a] "></div>
@@ -57,7 +57,7 @@ export default function Nestnavbar() {
               </ul>
             </div>
           </div>
-          <div className="item flex space-x-3 text-[13px] text-[#333e48]">
+          <div className="item flex space-x-3 text-[13px] text-nest-theme-menu-default-title-color">
             <div className="icon flex space-x-2  ">
               <ul className="flex space-x-4">
                 <li className="flex space-x-3">
@@ -89,7 +89,7 @@ export default function Nestnavbar() {
             />
           </div>
           <div className="item w-[75%]  ">
-            <div className="input-cat rounded-sm p-1 w-[100%] border-[#bce3c9] border-2">
+            <div className="input-cat rounded-sm p-1 w-[100%] border-nest-theme-border-color border-2">
               <select
                 name=""
                 id=""
@@ -122,40 +122,40 @@ export default function Nestnavbar() {
           <div className="item w-[50%] flex mt-3 justify-center space-x-10 text-[25px]">
             <div className="icon flex space-x-2">
               <div className="relative">
-                <ImLoop2 className="rotate-[77deg] text-[#253d4e]" />
+                <ImLoop2 className="rotate-[77deg] text-nest-theme-menu-icon-color" />
                 <h3
-                  className="bg-[#3bb74e] w-[20px] absolute -top-2   right-0 left-4 h-[20px] rounded-full text-[14px] 
+                  className="bg-nest-theme-menu-icon-number-bg-color w-[20px] absolute -top-2   right-0 left-4 h-[20px] rounded-full text-[14px] 
             grid place-items-center font-[600] text-white"
                 >
                   0
                 </h3>
               </div>
-              <h3 className="text-[15px] font-[600] mt-2 text-[#7e7e7e]">
+              <h3 className="text-[15px] font-[600] mt-2 text-nest-theme-menu-default-title-color">
                 Compare
               </h3>
             </div>
             <div className="icon flex space-x-2">
               <div className="relative">
-                <FiHeart className="text-[#253d4e]" />
+                <FiHeart className="text-nest-theme-menu-icon-color" />
                 <h3
-                  className="bg-[#3bb74e] w-[20px] absolute -top-2   right-0 left-4 h-[20px] rounded-full text-[14px] 
+                  className="bg-nest-theme-menu-icon-number-bg-color w-[20px] absolute -top-2   right-0 left-4 h-[20px] rounded-full text-[14px] 
             grid place-items-center font-[600] text-white"
                 >
                   0
                 </h3>
               </div>
-              <h3 className="text-[15px] font-[600] mt-2 text-[#7e7e7e]">
+              <h3 className="text-[15px] font-[600] mt-2 text-nest-theme-menu-default-title-color">
                 Wishlist
               </h3>
             </div>
             <div className="icon relative">
               <div className="flex mt-1">
-                <HiOutlineShoppingCart className=" text-[29px] text-[#253d4e]" />
-                <h3 className="text-[15px] font-[600] mt-2 text-[#7e7e7e]">
+                <HiOutlineShoppingCart className=" text-[29px] text-nest-theme-menu-icon-color" />
+                <h3 className="text-[15px] font-[600] mt-2 text-nest-theme-menu-default-title-color">
                   Cart
                 </h3>
                 <h3
-                  className="bg-[#3bb74e] w-[20px] text-white absolute -top-2   right-0 left-3 h-[20px] rounded-full text-[14px] 
+                  className="bg-nest-theme-menu-icon-number-bg-color w-[20px] text-white absolute -top-2   right-0 left-3 h-[20px] rounded-full text-[14px] 
             grid place-items-center  "
                 >
                   0
@@ -164,9 +164,9 @@ export default function Nestnavbar() {
             </div>
             <div className="icon relative">
               <div className="flex mt-1">
-                <FiUser className="text-[#253d4e]" />
-                <h3 className="text-[14px] font-[600] mt-1 text-[#7e7e7e]">
-                  My Account
+                <FiUser className="text-nest-theme-menu-icon-color" />
+                <h3 className="text-[14px] font-[600] mt-1 text-nest-theme-menu-default-title-color">
+                  Account
                 </h3>
               </div>
             </div>
@@ -174,7 +174,10 @@ export default function Nestnavbar() {
         </div>
 
         <div className="navigation flex pl-5 space-x-4">
-          <div className="item flex justify-center space-x-3 w-[19%] text-white rounded-md text-[14px] font-[600]  p-3 bg-[#3BB77E]">
+          <div
+            className="item flex justify-center space-x-3
+           w-[19%] text-nest-theme-allcate-title-color rounded-md text-[14px] font-[600]  p-3 bg-nest-theme-allcate-bg-color"
+          >
             <div>
               {" "}
               <BiGridAlt className="text-[23px]" />
@@ -182,7 +185,7 @@ export default function Nestnavbar() {
             <h3 className="text-[16px] font-[800]"> Browse All Categories</h3>
             <FontAwesomeIcon icon={faAngleDown} className="text-white mt-1" />
           </div>
-          <div className="item w-[75%]  text-[#253d4e] font-[800]">
+          <div className="item w-[75%]  text-nest-theme-menu-title-color font-[800]">
             <ul className="flex space-x-11 p-3 text-[14px] ">
               <li>
                 <a href="">Home</a> <FontAwesomeIcon icon={faAngleDown} />
@@ -278,7 +281,7 @@ export default function Nestnavbar() {
                 </button>
               </div>
             </div>
-            <ul className="space-y-2 justify-center   p-4">
+            <ul className="space-y-2 justify-center   p-4 text-nest-theme-menu-title-color">
               <li className="flex justify-between border-b p-2">
                 <a href="">Home</a>
                 <FontAwesomeIcon icon={faAngleDown} />
@@ -326,16 +329,16 @@ export default function Nestnavbar() {
                 <h3 className="text-[#253d4e] font-[600]">Follow Us</h3>
 
                 <div className="flex space-x-3">
-                  <div className="icon w-[25px] h-[25px] text-[14px ] text-white bg-[#3bb77e] rounded-full  grid place-items-center">
+                  <div className="icon w-[25px] h-[25px] text-[14px ] text-nest-theme-menu-icon-color bg-nest-theme-allcate-bg-color rounded-full  grid place-items-center">
                     <FontAwesomeIcon icon={faHeadphones} />
                   </div>
-                  <div className="icon w-[25px] h-[25px] text-[14px ] text-white bg-[#3bb77e] rounded-full  grid place-items-center">
+                  <div className="icon w-[25px] h-[25px] text-[14px ] text-nest-theme-menu-icon-color bg-nest-theme-allcate-bg-color rounded-full  grid place-items-center">
                     <FontAwesomeIcon icon={faHeadphones} />
                   </div>
-                  <div className="icon w-[25px] h-[25px] text-[14px ] text-white bg-[#3bb77e] rounded-full  grid place-items-center">
+                  <div className="icon w-[25px] h-[25px] text-[14px ] text-nest-theme-menu-icon-color bg-nest-theme-allcate-bg-color rounded-full  grid place-items-center">
                     <FontAwesomeIcon icon={faHeadphones} />
                   </div>
-                  <div className="icon w-[25px] h-[25px] text-[14px ] text-white bg-[#3bb77e] rounded-full  grid place-items-center">
+                  <div className="icon w-[25px] h-[25px] text-[14px ] text-nest-theme-menu-icon-color bg-nest-theme-allcate-bg-color rounded-full  grid place-items-center">
                     <FontAwesomeIcon icon={faHeadphones} />
                   </div>
                 </div>

@@ -36,40 +36,43 @@ export default function Electronavbar() {
     <div className="menubar">
       <div className=" md:block hidden electro-container font-Inter border-b-2 ">
         <div className="topbar p-2 justify-between flex border pl-10 pr-10">
-          <div className="item flex space-x-3 text-[13px] text-[#333e48]">
+          <div className="item flex space-x-3 text-[13px] text-electrox-theme-default-menu-title-color">
             <div className="icon flex space-x-2  ">
-              <FontAwesomeIcon icon={faPhone} className="mt-1 text-[#fed700]" />
+              <FontAwesomeIcon
+                icon={faPhone}
+                className="mt-1 text-electrox-theme-default-icon-color"
+              />
 
-              <h3 className="text-[13px] text-[#333e48] font-[500]">
+              <h3 className="text-[13px] text-electrox-theme-default-menu-title-color font-[500]">
                 (+0800) 123 456 7890
               </h3>
               <div className="w-[1px] h-[1rem] mt-1 bg-[#333e481a] "></div>
             </div>
             <div className="icon flex space-x-2 font-[500]">
               <div>
-                <VscMail className="mt-1 text-[#fed700] text-[17px]" />
+                <VscMail className="mt-1 text-electrox-theme-default-icon-color text-[17px]" />
               </div>
               <h3>sample@email.com</h3>
             </div>
           </div>
 
-          <div className="item flex space-x-5 text-[13px] text-[#333e48]">
+          <div className="item flex space-x-5 text-[13px] text-electrox-theme-default-menu-title-color">
             <div className="icon flex space-x-2  ">
-              <IoLocationOutline className=" text-[#333e48] text-[17px]" />
+              <IoLocationOutline className=" text-electrox-theme-default-menu-title-color text-[17px]" />
 
-              <h3 className="text-[13px] text-[#333e48] font-[500]">
+              <h3 className="text-[13px] text-electrox-theme-default-menu-title-color font-[500]">
                 Store Location
               </h3>
               <div className="w-[1px] h-[1rem] bg-[#333333e48e481a] "></div>
             </div>
             <div className="icon flex space-x-2">
-              <BiUser className=" text-[#333e48] text-[17px]" />
-              <h3 className="text-[13px] text-[#333e48] font-[500]">
+              <BiUser className=" text-electrox-theme-default-menu-title-color text-[17px]" />
+              <h3 className="text-[13px] text-electrox-theme-default-menu-title-color font-[500]">
                 Sign in or Register
               </h3>
             </div>
             <div className="icon flex space-x-2">
-              <BsGlobe className=" text-[#333e48] text-[20px]" />
+              <BsGlobe className=" text-electrox-theme-default-menu-title-color text-[20px]" />
             </div>
           </div>
         </div>
@@ -86,32 +89,33 @@ export default function Electronavbar() {
             <input
               type="text"
               value="Search"
-              className="w-[80%] rounded-l-3xl border-[#fed700] border-2"
+              className="w-[80%] rounded-l-3xl 
+              border-electrox-theme-input-border-color text-electrox-theme-input-title-color border-2"
             />
-            <button className="bg-[#fed700] grid place-items-center  border-2 border-[#fed700] p-2 w-[8%] rounded-r-3xl">
-              <BsSearch className="text-[20px]" />
+            <button className="bg-electrox-theme-search-bg-color grid place-items-center  border-2 border-electrox-theme-input-border-color p-2 w-[8%] rounded-r-3xl">
+              <BsSearch className="text-[20px] text-electrox-theme-search-title-color" />
             </button>
           </div>
           <div className="item p-1 w-[20%] flex justify-center space-x-14 text-[22px]">
             <div className="icon relative ">
               <FontAwesomeIcon
                 icon={faCodeCompare}
-                className="rotate-[77deg]"
+                className="rotate-[77deg] text-electrox-theme-default-menu-title-color"
               />
               <h3
-                className="bg-[#fed700] w-[23px] 
+                className="bg-electrox-theme-count-number-title-color w-[23px] 
                 absolute top-3 right-0 left-3 h-[23px] rounded-full text-[12px] 
-            grid place-items-center font-[600] text-[#333e48]"
+            grid place-items-center font-[600] text-electrox-theme-default-menu-title-color"
               >
                 0
               </h3>
             </div>
             <div className="icon relative mt-1">
-              <FiHeart className="text-[25px]" />
+              <FiHeart className="text-[25px] text-electrox-theme-default-menu-title-color" />
               <h3
-                className="bg-[#fed700] w-[23px] 
+                className="bg-electrox-theme-count-number-title-color w-[23px] 
                 absolute top-3 right-0 left-3 h-[23px] rounded-full text-[12px] 
-            grid place-items-center font-[600] text-[#333e48]"
+            grid place-items-center font-[600] text-electrox-theme-default-menu-title-color"
               >
                 2
               </h3>
@@ -119,13 +123,13 @@ export default function Electronavbar() {
             <div className="icon  ">
               <div className="flex  mt-1 space-x-2">
                 <div className=" relative  ">
-                  <HiOutlineShoppingBag className="text-[27px]" />
+                  <HiOutlineShoppingBag className="text-[27px] text-electrox-theme-default-menu-title-color" />
 
                   <h3
-                    className="bg-[#fed700] w-[25px]
+                    className="bg-electrox-theme-count-number-title-color w-[25px]
                    absolute top-3 right-0 left-2 h-[25px] 
                    rounded-full text-[12px] 
-            grid place-items-center font-[600] text-[#333e48]"
+            grid place-items-center font-[600] text-electrox-theme-default-menu-title-color"
                   >
                     0
                   </h3>
@@ -137,13 +141,17 @@ export default function Electronavbar() {
         </div>
 
         <div className="navigation flex pl-5 space-x-4">
-          <div className=" text-[#333e48] item w-[19%] flex space-x-3 font-[700] rounded-xl text-[14px]   p-3 bg-[#fed700]">
+          <div
+            className=" text-electrox-theme-default-menu-title-color
+           item w-[19%] flex space-x-3 font-[700] rounded-xl text-[14px] 
+             p-3 bg-electrox-theme-alldepartment-bg-color"
+          >
             <div>
               <FontAwesomeIcon icon={faList} className="text-[18px]" />
             </div>{" "}
             <h3>All Department</h3>
           </div>
-          <div className="item w-[75%]  ">
+          <div className="item w-[75%]  text-electrox-theme-default-menu-title-color ">
             <ul className="flex space-x-11 p-3 text-[14px] font-[600]">
               <li>
                 <a href="">Home</a> <FontAwesomeIcon icon={faAngleDown} />
@@ -165,13 +173,13 @@ export default function Electronavbar() {
         </div>
       </div>
 
-      <div className="md:hidden relative block mobilemenu p-4 justify-center bg-[#fed700]">
+      <div className="md:hidden relative block mobilemenu p-4 justify-center bg-electrox-theme-count-number-title-color">
         <div className="row flex justify-between ">
           <div className="item  space-x-6 flex">
             <div className="humbar " onClick={Hndle}>
               <FontAwesomeIcon
                 icon={faBars}
-                className="text-[25px] mt-1 text-[#333e48]"
+                className="text-[25px] mt-1 text-electrox-theme-default-menu-title-color"
               />
             </div>
             <div className="image">
@@ -182,7 +190,7 @@ export default function Electronavbar() {
               />
             </div>
           </div>
-          <div className="item text-[#333e48] ">
+          <div className="item text-electrox-theme-default-menu-title-color ">
             <div className="mt-1 flex justify-center space-x-5">
               {" "}
               <div className="icon">
@@ -194,7 +202,7 @@ export default function Electronavbar() {
               <div className="icon relative">
                 <HiOutlineShoppingBag className="text-[26px]" />
                 <h3
-                  className="bg-[#333e48] z-10 w-[20px] absolute bottom-0 top-4 right-0 left-2 h-[20px] rounded-full text-[14px] 
+                  className="bg-electrox-theme-default-menu-title-color z-10 w-[20px] absolute bottom-0 top-4 right-0 left-2 h-[20px] rounded-full text-[14px] 
             grid place-items-center font-[600] text-white"
                 >
                   0
@@ -211,12 +219,12 @@ export default function Electronavbar() {
               : "nav-menu hidden absolute space-y-9 z-20  top-0 transition-all bottom-0  duration-1000 left-0 right-0 bg-white"
           }
         >
-          <div className="row flex justify-between bg-[#fed700] p-3 pl-[1rem] pr-[1rem]">
+          <div className="row flex justify-between bg-electrox-theme-count-number-title-color p-3 pl-[1rem] pr-[1rem]">
             <div className="item justify-center space-x-6 flex">
               <div className="humbar " onClick={Hndle}>
                 <FontAwesomeIcon
                   icon={faXmark}
-                  className="text-[26px] text-[#333e48] text-[#33e48] mt-[5px]"
+                  className="text-[26px] text-electrox-theme-default-menu-title-color text-[#33e48] mt-[5px]"
                 />
               </div>
             </div>
@@ -226,10 +234,10 @@ export default function Electronavbar() {
                 <div className="icon relative ">
                   <FontAwesomeIcon
                     icon={faCodeCompare}
-                    className="rotate-[77deg] text-[25px] text-[#333e48]"
+                    className="rotate-[77deg] text-[25px] text-electrox-theme-default-menu-title-color"
                   />
                   <h3
-                    className="bg-[#333e48] w-[23px] 
+                    className="bg-electrox-theme-default-menu-title-color w-[23px] 
                 absolute top-3 right-0 left-1 h-[23px] rounded-full text-[12px] 
             grid place-items-center font-[600] text-[#fff]"
                   >
@@ -237,9 +245,9 @@ export default function Electronavbar() {
                   </h3>
                 </div>
                 <div className="icon relative ">
-                  <FiHeart className="text-[25px] text-[#333e48]" />
+                  <FiHeart className="text-[25px] text-electrox-theme-default-menu-title-color" />
                   <h3
-                    className="bg-[#333e48] w-[23px] 
+                    className="bg-electrox-theme-default-menu-title-color w-[23px] 
                 absolute top-3 right-0 left-1 h-[23px] rounded-full text-[12px] 
             grid place-items-center font-[600] text-[#fff]"
                   >
@@ -269,27 +277,30 @@ export default function Electronavbar() {
               </div>
             </li>
           </ul>
-          <div className="item p-5 space-y-2 flex flex-col  text-[13px] text-[#333e48]">
-            <h3 className="uppercase text-[16px] font-[700] text-[#333e48]">
+          <div className="item p-5 space-y-2 flex flex-col  text-[13px] text-electrox-theme-default-menu-title-color">
+            <h3 className="uppercase text-[16px] font-[700] text-electrox-theme-default-menu-title-color">
               need help? contact us
             </h3>
             <div className="icon flex space-x-2  ">
-              <FontAwesomeIcon icon={faPhone} className="mt-1 text-[#fed700]" />
+              <FontAwesomeIcon
+                icon={faPhone}
+                className="mt-1 text-electrox-theme-default-icon-color"
+              />
 
-              <h3 className="text-[13px] text-[#333e48] font-[500]">
+              <h3 className="text-[13px] text-electrox-theme-default-menu-title-color font-[500]">
                 (+0800) 123 456 7890
               </h3>
               <div className="w-[1px] h-[1rem] mt-1 bg-[#333e481a] "></div>
             </div>
             <div className="icon flex space-x-2 font-[500]">
               <div>
-                <VscMail className="mt-1 text-[#fed700] text-[17px]" />
+                <VscMail className="mt-1 text-electrox-theme-default-icon-color text-[17px]" />
               </div>
               <h3>sample@email.com</h3>
             </div>
           </div>
           <div className="">
-            <ul className="space-y-3 justify-center text-[#333e48]   ">
+            <ul className="space-y-3 justify-center text-electrox-theme-default-menu-title-color   ">
               <li className=" dropdown border-b p-2 pl-5">
                 <div className=" flex justify-between ">
                   <a href="">

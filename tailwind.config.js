@@ -117,6 +117,13 @@ module.exports = {
           "var(--nest-theme-button-default-bg-color)",
         "nest-theme-qty-border-button-color":
           "var(--nest-theme-qty-border-button-color)",
+        "nest-theme-menu-default-title-color":
+          "var(--nest-theme-menu-default-title-color)",
+        "nest-theme-menu-icon-color": "var(--nest-theme-menu-icon-color)",
+        "nest-theme-allcate-bg-color": "var(--nest-theme-allcate-bg-color)",
+        "nest-theme-allcate-title-color":
+          "var(--nest-theme-allcate-title-color)",
+        "nest-theme-menu-title-color": "var(--nest-theme-menu-title-color)",
 
         //MINIMOG THEME STYLE
         "minimog-theme-title-color": "var(--minimog-theme-title-color)",
@@ -150,6 +157,14 @@ module.exports = {
           "var(--minimog-theme-table-heading-title-color)",
         "minimog-theme-delete-button-color":
           "var(--minimog-theme-delete-button-color)",
+        "minimog-theme-topbar-bg-color": "var(--minimog-theme-topbar-bg-color)",
+        "minimog-theme-topbar-title-color":
+          "var(--minimog-theme-topbar-title-color)",
+        "minimog-theme-menu-title-color":
+          "var(--minimog-theme-menu-title-color)",
+        "minimog-theme-menu-icon-color": "var(--minimog-theme-menu-icon-color)",
+        "minimog-theme-menu-icon-number-bg-color":
+          "var(--minimog-theme-menu-icon-number-bg-color)",
 
         //LEO  THEME STYLE
         "leo-theme-title-color": "var(--leo-theme-title-color)",
@@ -183,6 +198,12 @@ module.exports = {
           "var( --leo-theme-wishlist-bg-hover-color)",
         "leo-theme-wishlist-bg-hover-color":
           "var(--leo-theme-wishlist-bg-hover-color)",
+        "leo-theme-menu-color": "var(--leo-theme-menu-color)",
+        "leo-theme-topmenu-title-color": "var(--leo-theme-topmenu-title-color)",
+        "leo-theme-menu-icon-color": "var(--leo-theme-menu-icon-color)",
+        "leo-theme-icon-number-color": "var(--leo-theme-icon-number-color)",
+        "leo-theme-icon-number-text-color":
+          "var(--leo-theme-icon-number-text-color)",
 
         //LAFAKA  THEME STYLE
         "lafaka-theme-title-color": "var(--lafaka-theme-title-color)",
@@ -221,6 +242,10 @@ module.exports = {
 
         //ELECTROX  THEME STYLE
         "electrox-theme-title-color": "var(--electrox-theme-title-color)",
+        "electrox-theme-buynow-title-color":
+          "var(--electrox-theme-buynow-title-color)",
+        "electrox-theme-buynow-bg-color":
+          "var(--electrox-theme-buynow-bg-color)",
         "electrox-theme-price-color": "var(--electrox-theme-price-color)",
         "electrox-theme-border-color": "var(--electrox-theme-border-color)",
         "electrox-theme-button-title-border-color":
@@ -271,6 +296,24 @@ module.exports = {
           "var(  --electrox-theme-clear-bg-color)",
         "electrox-theme-checkoutbtn-title-color":
           "var(  --electrox-theme-checkoutbtn-title-color)",
+        "electrox-theme-default-menu-title-color":
+          "var(  --electrox-theme-default-menu-title-color)",
+        "electrox-theme-search-title-color":
+          "var(  --electrox-theme-search-title-color)",
+        "electrox-theme-search-bg-color":
+          "var(  --electrox-theme-search-bg-color)",
+        "electrox-theme-input-title-color":
+          "var(  --electrox-theme-input-title-color)",
+        "electrox-theme-input-border-color":
+          "var(  --electrox-theme-input-border-color)",
+        "electrox-theme-count-number-title-color":
+          "var(  --electrox-theme-count-number-title-color)",
+        "electrox-theme-default-icon-color":
+          "var(  --electrox-theme-default-icon-color)",
+        "electrox-theme-default-icondeliverytime-color":
+          "var(  --electrox-theme-default-icondeliverytime-color)",
+        "electrox-theme-stockitem-color":
+          "var(  --electrox-theme-stockitem-color)",
 
         //cosmetica  THEME STYLE
         "cosmetica-theme-title-color": "var(--cosmetica-theme-title-color)",
@@ -319,6 +362,24 @@ module.exports = {
         "cosmetica-theme-cart-bg-color": "var(--cosmetica-theme-cart-bg-color)",
         "cosmetica-theme-table-title-color":
           "var(--cosmetica-theme-table-title-color)",
+        "cosmetica-theme-navbar-default-title-color":
+          "var(--cosmetica-theme-navbar-default-title-color)",
+        "cosmetica-theme-navbar-default-icon-color":
+          "var(--cosmetica-theme-navbar-default-icon-color)",
+        "cosmetica-theme-count-number-bg-color":
+          "var(--cosmetica-theme-count-number-bg-color)",
+        "cosmetica-theme-count-number-title-color":
+          "var(--cosmetica-theme-count-number-title-color)",
+        "cosmetica-theme-search-title-color":
+          "var(--cosmetica-theme-search-title-color)",
+        "cosmetica-theme-search-bg-color":
+          "var(--cosmetica-theme-search-bg-color)",
+        "cosmetica-theme-input-border-color":
+          "var(--cosmetica-theme-input-border-color)",
+        "cosmetica-theme-input-title-color":
+          "var(--cosmetica-theme-input-title-color)",
+        "cosmetica-theme-input-title-color":
+          "var(--cosmetica-theme-input-title-color)",
       },
     },
   },
