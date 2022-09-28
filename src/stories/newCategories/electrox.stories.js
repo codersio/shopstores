@@ -3,7 +3,7 @@ import React from "react";
 import Electroxcate from "../../components/newCategories/electroxcate";
 
 export default {
-  title: "Electroxcate",
+  title: "newCategory/Electroxcate",
   component: Electroxcate,
 };
 

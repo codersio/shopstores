@@ -3,7 +3,7 @@ import React from "react";
 import Alithemecate from "../../components/newCategories/alithemecategory";
 
 export default {
-  title: "Alithemecate",
+  title: "newCategory/Alithemecate",
   component: Alithemecate,
 };
 

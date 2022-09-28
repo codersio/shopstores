@@ -4,6 +4,8 @@ import "./style.scss";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { HiOutlineMinus } from "react-icons/hi";
+import { BsPlus } from "react-icons/bs";
 import {
   fa0,
   faGreaterThan,
@@ -13,12 +15,14 @@ import {
   faAngleLeft,
   faLessThan,
   faStar,
-  faHeart,
+  faScaleBalanced,
+  faHeartbeat,
 } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-regular-svg-icons";
 
 export default function Singleproduct7() {
   return (
-    <div className="container p-6 ">
+    <div className="container p-6 font-lafaka-theme-font">
       <div className="container-child md:flex md:space-x-10 ">
         <div className="row md:w-[50%]">
           <div className="image p-2">
@@ -31,61 +35,85 @@ export default function Singleproduct7() {
         </div>
         <div className="row md:w-[50%]">
           <div className="title-clas p-2 space-y-4">
-            <h3 className=" font-mono text-xl space-x-2 font-bold">
+            <h3 className="text-lafaka-theme-title-color   text-xl md:text-[35px] space-x-2 font-bold">
               Tuscan Pizza
             </h3>
-            <p>
+            <p className=" text-[15px] text-lafaka-theme-default-title-color">
               Smoked brisket, tender ribs, smoked sausage, bacon & cheddar with
               lettuce, tomato, house BBQ & ranch.
             </p>
           </div>
-          <div className="price-class mt-3 bg-[#f8f8f8] border  w-[80%] p-3  rounded-3xl">
+          <div
+            className="price-class mt-3 
+          flex space-x-2 w-[41%]   bg-lafaka-theme-default-bg-color border   p-3  rounded-3xl"
+          >
+            <div className="grid place-items-center">
+              <FontAwesomeIcon icon={faScaleBalanced} />
+            </div>
             <h3 className="  text-sm text-slate-500">
-              <span className="text-black">Serving size:</span> 11" - 300 g /
-              14" - 480 g / 18" - 820 g
+              <span className="text-lafaka-theme-title-color ">
+                Serving size:
+              </span>{" "}
+              11" - 300 g
             </h3>
           </div>
           <div className="qty-class mt-10  flex">
-            <div className="item w-[6rem] bg-[#f8f8f8] border text-center h-[3.5rem] p-2 text-sm text-slate-600">
+            <div className="item w-[6rem] bg-lafaka-theme-default-bg-color border text-center h-[3.5rem] p-2 text-sm text-slate-600">
               <h3>
-                ENERGY <br /> <span className="text-black">490 Cal</span>
+                ENERGY <br />{" "}
+                <span className="text-lafaka-theme-title-color">490 Cal</span>
               </h3>
             </div>
-            <div className="item w-[6rem] bg-[#f8f8f8] border text-center h-[3.5rem] p-2 text-sm text-slate-600">
+            <div className="item w-[6rem] bg-lafaka-theme-default-bg-color border text-center h-[3.5rem] p-2 text-sm text-slate-600">
               <h3>
-                PROTEIN <br /> <span className="text-black">490 Cal</span>
+                PROTEIN <br />{" "}
+                <span className="text-lafaka-theme-title-color">490 Cal</span>
               </h3>
             </div>
-            <div className="item w-[6rem] bg-[#f8f8f8] border text-center h-[3.5rem] p-2 text-sm text-slate-600">
+            <div className="item w-[6rem] bg-lafaka-theme-default-bg-color border text-center h-[3.5rem] p-2 text-sm text-slate-600">
               <h3>
-                FAT <br /> <span className="text-black">490 Cal</span>
+                FAT <br />{" "}
+                <span className="text-lafaka-theme-title-color">490 Cal</span>
               </h3>
             </div>
           </div>
           <div className="qty-class   flex">
-            <div className="item w-[6rem] bg-[#f8f8f8] border text-center h-[3.5rem] p-2 text-sm text-slate-600">
+            <div className="item w-[6rem] bg-lafaka-theme-default-bg-color border text-center h-[3.5rem] p-2 text-sm text-slate-600">
               <h3>
-                ENERGY <br /> <span className="text-black">490 Cal</span>
+                ENERGY <br />{" "}
+                <span className="text-lafaka-theme-title-color">490 Cal</span>
               </h3>
             </div>
-            <div className="item w-[6rem] bg-[#f8f8f8] border text-center h-[3.5rem] p-2 text-sm text-slate-600">
+            <div className="item w-[6rem] bg-lafaka-theme-default-bg-color border text-center h-[3.5rem] p-2 text-sm text-slate-600">
               <h3>
-                PROTEIN <br /> <span className="text-black">490 Cal</span>
+                PROTEIN <br />{" "}
+                <span className="text-lafaka-theme-title-color">490 Cal</span>
               </h3>
             </div>
-            <div className="item w-[6rem] bg-[#f8f8f8] border text-center h-[3.5rem] p-2 text-sm text-slate-600">
+            <div className="item w-[6rem] bg-lafaka-theme-default-bg-color border text-center h-[3.5rem] p-2 text-sm text-slate-600">
               <h3>
-                FAT <br /> <span className="text-black">490 Cal</span>
+                FAT <br />{" "}
+                <span className="text-lafaka-theme-title-color">490 Cal</span>
               </h3>
             </div>
           </div>
-
-          <div className="div mt-5">
-            <p className="text-sm text-slate-400">
+          <div className="div mt-5 space-y-2">
+            <p className="text-[12px] text-text-lafaka-theme-default-title-color">
               *DI: Recommended Daily Intake based on 2000 calories diet
             </p>
+            <div className="flex space-x-2">
+              <div className="icon grid place-items-center">
+                <FontAwesomeIcon
+                  icon={faHeartbeat}
+                  className="text-[#e88835]"
+                />
+              </div>
+              <h3 className="text-[12.5px] text-lafaka-theme-default-title-color">
+                Allergens: Milk, Eggs, Soy, Glutten
+              </h3>
+            </div>
             <div className="star  flex space-x-3 ">
-              <div className="text-[0.8rem] space-x-2 text-black">
+              <div className="text-[0.8rem] space-x-2 text-lafaka-theme-title-color text-[#f6a809]">
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
@@ -94,88 +122,135 @@ export default function Singleproduct7() {
               <div className="rive text-slate-300">(32 reviews)</div>
             </div>
           </div>
-          <div className=" flex text-sm  space-x-5 mt-3 text-black">
-            <bdi className=" font-serif font-[900] text-3xl ">
-              $14. <span>99</span> – $29.99
-            </bdi>
+          <div className=" flex text-sm  space-x-5 mt-3 text-lafaka-theme-price-color">
+            <div className=" relative font-[700]  text-[30px] flex space-x-4 ">
+              $14{" "}
+              <span className="absolute  left-[3.75rem] bottom-[5px] text-[22px]  text-lafaka-theme-price-color">
+                .99
+              </span>{" "}
+            </div>
           </div>
-
-          <div className=" flex space-x-10 mt-6">
-            <div className="item text-black font-semibold">
+          {/* <div className=" flex space-x-10 mt-6">
+            <div className="item text-lafaka-theme-title-color font-semibold">
               <h3 className="mt-5">SIZE :</h3>
             </div>
-            <div className="item">
+            {/* <div className="item">
               <div className="size flex space-x-2">
-                <div className="s hover:bg-pink-700 hover:text-white border grid text-lg rounded-md place-items-center bg-[#f8f8f8] w-[50px] h-[50px] ">
+                <div className="s hover:bg-pink-700 hover:text-white border grid text-lg rounded-md place-items-center bg-lafaka-theme-default-bg-color w-[50px] h-[50px] ">
                   xl
                 </div>
-                <div className="s hover:bg-pink-700 hover:text-white border grid text-lg rounded-md place-items-center bg-[#f8f8f8] w-[50px] h-[50px] ">
+                <div className="s hover:bg-pink-700 hover:text-white border grid text-lg rounded-md place-items-center bg-lafaka-theme-default-bg-color w-[50px] h-[50px] ">
                   xl
                 </div>
-                <div className="s hover:bg-pink-700 hover:text-white border grid text-lg rounded-md place-items-center bg-[#f8f8f8] w-[50px] h-[50px] ">
+                <div className="s hover:bg-pink-700 hover:text-white border grid text-lg rounded-md place-items-center bg-lafaka-theme-default-bg-color w-[50px] h-[50px] ">
                   xl
                 </div>
-                <div className="s hover:bg-pink-700 hover:text-white border grid text-lg rounded-md place-items-center bg-[#f8f8f8] w-[50px] h-[50px] ">
+                <div className="s hover:bg-pink-700 hover:text-white border grid text-lg rounded-md place-items-center bg-lafaka-theme-default-bg-color w-[50px] h-[50px] ">
                   xl
                 </div>
               </div>
-            </div>
-          </div>
-          <div>
-            <h3 className="font-serif font-[900] text-3xl mt-7">$14.99</h3>
-          </div>
-
-          <div className=" relative border md:w-[80%] p-5 mt-5  space-y-3">
+            </div> */}
+          {/* </div> */}
+          <div className=" relative border md:w-[80%] p-5 mt-5  space-y-3 ">
             Please, choose your preferred crust type.
-            <div className="absolute top-[-12px] bg-white  font-semibold">
+            <div className="absolute top-[-12px] bg-white text-lafaka-theme-option-color  font-semibold">
               CRUST *
             </div>
-            <div className="ra bg-[#f1f1f1] p-2 font-medium  text-sm space-x-3">
+            <div className="ra bg-lafaka-theme-default-bg-color p-2 font-medium  text-sm space-x-3">
               <input type="radio" name="" id="" />{" "}
-              <label htmlFor=""> THIN CRUST</label>
+              <label htmlFor="" className="text-lafaka-theme-extra-color">
+                {" "}
+                THIN CRUST
+              </label>
             </div>
-            <div className="ra bg-[#f1f1f1] p-2 font-medium  text-sm space-x-3">
+            <div className="ra bg-lafaka-theme-default-bg-color p-2 font-medium  text-sm space-x-3">
               <input type="radio" name="" id="" />{" "}
-              <label htmlFor=""> THIN CRUST</label>
+              <label htmlFor="" className="text-lafaka-theme-extra-color">
+                {" "}
+                THIN CRUST
+              </label>
             </div>
           </div>
           <div className=" relative md:w-[80%] border p-5 mt-5  space-y-3">
             {/* Please, choose your preferred crust type. */}
-            <div className="absolute top-[-12px] bg-white  font-semibold">
+            <div className="absolute top-[-12px] bg-white text-lafaka-theme-option-color  font-semibold">
               EXTRA TOPPINGS
             </div>
-            <div className="ra bg-[#f1f1f1] p-2 font-medium  text-sm space-x-3">
+            <div className="ra bg-lafaka-theme-default-bg-color p-2 font-medium  text-sm space-x-3">
               <input type="radio" name="" id="" />{" "}
-              <label htmlFor=""> THIN CRUST</label>
+              <label htmlFor="" className="text-lafaka-theme-extra-color">
+                {" "}
+                THIN CRUST
+              </label>
             </div>
-            <div className="ra bg-[#f1f1f1] p-2 font-medium  text-sm space-x-3">
+            <div className="ra bg-lafaka-theme-default-bg-color p-2 font-medium  text-sm space-x-3">
               <input type="radio" name="" id="" />{" "}
-              <label htmlFor=""> THIN CRUST</label>
+              <label htmlFor="" className="text-lafaka-theme-extra-color">
+                {" "}
+                THIN CRUST
+              </label>
             </div>
           </div>
           <div className="md:w-[80%]  border p-5 mt-5  space-y-3">
             {/* Please, choose your preferred crust type. */}
-            <div className=" bg-white  font-semibold flex space-x-6">
-              <div className="item">Options total:</div>
-              <div className="item font-bold">$1.00</div>
+            <div className=" bg-white  font-[400] flex space-x-6">
+              <div className="item text-lafaka-theme-extra-color">
+                Options total:
+              </div>
+              <div className="item font-bold text-lafaka-theme-extra-color">
+                $1.00
+              </div>
             </div>
-            <div className=" bg-white  font-semibold flex space-x-6">
-              <div className="item">Options total:</div>
-              <div className="item font-bold">$1.00</div>
+            <div className=" bg-white  font-[400] flex space-x-6">
+              <div className="item text-lafaka-theme-extra-color">
+                Sub total:
+              </div>
+              <div className="item font-bold text-lafaka-theme-extra-color">
+                $1.00
+              </div>
             </div>
           </div>
-
-          <div className="cart flex w-full space-x-2 mt-5">
-            <div className=" rounded-3xl font-semibold item flex space-x-6 bg-[#f5f5f5] p-2 md:w-[15%] w-[25%]">
-              <div className="m">-</div>
-              <div className="m">2</div>
-              <div className="m">+</div>
+          <div className="cart  flex w-full space-x-2 mt-5">
+            <div
+              className="   bg-lafaka-theme-default-bg-color
+                   rounded-3xl  bottom-2 w-[20%] 
+                      px-3 p-2     
+                       text-lafaka-theme-title-color   flex text-xl  
+                        leading-9    justify-between text-center   "
+              // onClick={ClickButton}
+            >
+              <div
+                className="  cursor-pointer
+                      
+                      text-sm grid place-items-center "
+                // style={{ marginTop: "-8px" }}
+              >
+                <HiOutlineMinus />
+              </div>
+              <div className="shrink block  w-16 text-minimog-theme-title-color ">
+                <div className="grid place-items-center text-[1rem] mt-[0.3rem] font-medium ">
+                  1
+                </div>
+              </div>{" "}
+              <div
+                // onClick={incrymentQty}
+                className=" grid place-items-center
+                     cursor-pointer text-minimog-theme-title-color"
+              >
+                <BsPlus />
+              </div>
             </div>
             <input
               type="button"
               value="ORDER"
-              className="rounded-3xl w-[40%] font-semibold p-3 text-white bg-pink-700"
+              className="rounded-3xl
+               w-[30%] 
+                p-2 text-lafaka-theme-button-bg-title-color
+                 bg-lafaka-theme-order-button-bg-color"
             />
+            <div className="icon grid place-items-center">
+              <FontAwesomeIcon icon={faHeart} className="text-[1.5rem] text-" />
+            </div>
           </div>
         </div>
       </div>
@@ -190,7 +265,10 @@ export default function Singleproduct7() {
           >
             <li class="mr-2" role="presentation">
               <button
-                class="inline-block p-4 font-[open-sans] rounded-t-lg border-b-2 text-slate-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-yellow-500 dark:border-yellow-500"
+                class="inline-block p-4  rounded-t-lg border-b-2
+                 text-slate-600 hover:text-blue-600
+                  dark:text-blue-500 dark:hover:text-blue-500
+                   border-lafaka-theme-border-b-color"
                 id="profile-tab"
                 data-tabs-target="#profile"
                 type="button"

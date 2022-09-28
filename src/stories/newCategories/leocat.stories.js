@@ -3,7 +3,7 @@ import React from "react";
 import Leothemecate from "../../components/newCategories/leocate";
 
 export default {
-  title: "Leothemecate",
+  title: "newCategory/Leothemecate",
   component: Leothemecate,
 };
 

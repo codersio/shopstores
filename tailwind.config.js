@@ -127,6 +127,8 @@ module.exports = {
 
         //MINIMOG THEME STYLE
         "minimog-theme-title-color": "var(--minimog-theme-title-color)",
+        "minimog-theme-menu-icon-number-color":
+          "var(--minimog-theme-menu-icon-number-color)",
         "minimog-theme-price-color": "var(--minimog-theme-price-color)",
         "minimog-theme-mrp-color": "var(--minimog-theme-mrp-color)",
         "minimog-theme-border-color": "var(--minimog-theme-border-color)",
@@ -165,6 +167,18 @@ module.exports = {
         "minimog-theme-menu-icon-color": "var(--minimog-theme-menu-icon-color)",
         "minimog-theme-menu-icon-number-bg-color":
           "var(--minimog-theme-menu-icon-number-bg-color)",
+        "minimog-theme-buynow-bg-color": "var(--minimog-theme-buynow-bg-color)",
+        "minimog-theme-bottomline-color":
+          "var(--minimog-theme-bottomline-color)",
+        "minimog-theme-category-title": "var(--minimog-theme-category-title)",
+        "minimog-theme-card-cartbutton-bg-color":
+          "var(--minimog-theme-card-cartbutton-bg-color)",
+        "minimog-theme-default-button-bg-color":
+          "var(--minimog-theme-default-button-bg-color)",
+        "minimog-theme-footer-title-color":
+          "var(--minimog-theme-footer-title-color)",
+        "minimog-theme-footer-title-default-color":
+          "var(--minimog-theme-footer-title-default-color)",
 
         //LEO  THEME STYLE
         "leo-theme-title-color": "var(--leo-theme-title-color)",
@@ -207,6 +221,13 @@ module.exports = {
 
         //LAFAKA  THEME STYLE
         "lafaka-theme-title-color": "var(--lafaka-theme-title-color)",
+        "lafaka-theme-border-b-color": "var(--lafaka-theme-border-b-color)",
+        "lafaka-theme-wishlist-icon-color":
+          "var(--lafaka-theme-wishlist-icon-color)",
+        "lafaka-theme-extra-color": "var(--lafaka-theme-extra-color)",
+        "lafaka-theme-order-button-bg-color":
+          "var(--lafaka-theme-order-button-bg-color)",
+        "lafaka-theme-option-color": "var(--lafaka-theme-option-color)",
         "lafaka-theme-price-color": "var(--lafaka-theme-price-color)",
         "lafaka-theme-cartbutton-title-color":
           "var(--lafaka-theme-cartbutton-title-color)",
@@ -383,5 +404,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require("flowbite/plugin")],
+  plugins: [require("flowbite/plugin"), require("tailwind-scrollbar")],
+  variants: {
+    scrollbar: ["dark"],
+  },
 };

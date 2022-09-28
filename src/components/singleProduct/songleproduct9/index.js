@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import "./style.scss";
+import "./electrox.scss";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,7 +17,7 @@ export default function Singleproduct9() {
     <div div className="font-electrox-theme-font">
       <div className="contaier px-[9rem] p-4 flex md:space-x-6 font-electrox-theme-font">
         <div className="row w-[60%]">
-          <Carousel showStatus={false}>
+          <Carousel showStatus={false} axis="vertical">
             <img
               src="https://cdn.shopify.com/s/files/1/0265/3493/6627/products/ipadgreen.png?v=1649393790"
               alt=""

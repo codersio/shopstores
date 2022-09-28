@@ -3,7 +3,7 @@ import React from "react";
 import Minimogcategory from "../../components/newCategories/minimogcategory";
 
 export default {
-  title: "Minimogcategory",
+  title: "newCategory/Minimogcategory",
   component: Minimogcategory,
 };
 

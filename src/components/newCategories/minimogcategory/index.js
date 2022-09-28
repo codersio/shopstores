@@ -1,7 +1,7 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../../Font/globalfont.scss";
-import ScrollContainer from "react-indiana-drag-scroll";
+
 import React from "react";
 
 export default function Minimogcategory() {

@@ -4,7 +4,7 @@ import "./styled.scss";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
-export default function Singleproduct11() {
+export default function Leotheme() {
   return (
     <div className="container p-3 md:p-16 space-y-16">
       <div className="contain-child md:flex md:space-x-16">
@@ -25,7 +25,7 @@ export default function Singleproduct11() {
 
         <div className="row">
           <div className="title space-y-5">
-            <div className="item font-[Raleway] font-bold text-2xl text-black">
+            <div className="item  font-bold text-2xl text-leo-theme-title-color">
               <h3>FUGIAT NULLA</h3>
             </div>
             <div className="div">
@@ -33,13 +33,15 @@ export default function Singleproduct11() {
             </div>
           </div>
           <div className="pr-re mt-5">
-            <div className="item font-[Raleway]  font-bold">
-              <h3 className="text-3xl">$26.99</h3>
+            <div className="item   font-bold">
+              <h3 className="text-3xl text-leo-theme-price-color">$26.99</h3>
             </div>
           </div>
           <div className="view mt-5">
-            <h3 className="text-slate-500">Delivery: 1 to 3 weeks</h3>
-            <p className="text-[#888] mt-5">
+            <h3 className="text-leo-theme-default-title-color">
+              Delivery: 1 to 3 weeks
+            </h3>
+            <p className="text-leo-theme-default-title-color mt-5">
               Lorem ipsum dolor sit amet, mel paulo sonet latine ad, vis te
               ridens oporteat, tale ipsum facilis pro ei. Utamur deterruisset ea
               sea. Ferri scriptorem concludaturque ne his, te nostrud patrioque
@@ -50,11 +52,13 @@ export default function Singleproduct11() {
           </div>
           <div className=" flex space-x-10 mt-6">
             <div className="item text-black font-semibold">
-              <h3 className="mt-2 text-[#666] text-sm font-medium">SIZE :</h3>
+              <h3 className="mt-2 text-leo-theme-size-default-title text-sm font-medium">
+                SIZE :
+              </h3>
             </div>
             <div className="item">
               <div className="size flex space-x-2">
-                <div className="s  text-[#666]  border-black  grid text-lg border-2 place-items-center  w-[40px] h-[40px] ">
+                <div className="s  text-leo-theme-size-default-title  border-black  grid text-lg border-2 place-items-center  w-[40px] h-[40px] ">
                   xl
                 </div>
                 {/* <div className="s hover:bg-pink-700 hover:text-white border grid text-lg rounded-md place-items-center bg-[#f8f8f8] w-[50px] h-[50px] ">
@@ -70,8 +74,10 @@ export default function Singleproduct11() {
             </div>
           </div>
           <div className=" flex space-x-6 mt-6">
-            <div className="item text-black font-semibold">
-              <h3 className="mt-2 text-[#666] text-sm font-medium">COLOR </h3>
+            <div className="item text-leo-theme-size-default-title font-semibold">
+              <h3 className="mt-2 text-leo-theme-size-default-title text-sm font-medium">
+                COLOR{" "}
+              </h3>
             </div>
             <div className="item">
               <div className="size flex space-x-2">
@@ -90,7 +96,7 @@ export default function Singleproduct11() {
             </div>
           </div>
           <div className="qty mt-3 space-y-4">
-            <h3>Quantity</h3>
+            <h3 className="text-leo-theme-size-default-title">Quantity</h3>
             <div className="cart-q ">
               <input
                 type="number"
@@ -197,7 +203,7 @@ export default function Singleproduct11() {
           >
             <li class="mr-2" role="presentation">
               <button
-                class="font-[raleway] border-l-[#33c9db] border-l-4 font-semibold text-left inline-block w-full p-4   border text-[#33c9db] hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500  dark:border-yellow-500"
+                class=" border-l-[#33c9db] border-l-4 font-semibold text-left inline-block w-full p-4   border text-[#33c9db] hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500  dark:border-yellow-500"
                 id="profile-tab"
                 data-tabs-target="#profile"
                 type="button"
@@ -210,7 +216,7 @@ export default function Singleproduct11() {
             </li>
             <li class="mr-2" role="presentation">
               <button
-                class="inline-block font-[raleway] font-semibold text-left w-full p-4   border text-black hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500  dark:border-yellow-500"
+                class="inline-block  font-semibold text-left w-full p-4   border text-black hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500  dark:border-yellow-500"
                 id="dashboard-tab"
                 data-tabs-target="#dashboard"
                 type="button"

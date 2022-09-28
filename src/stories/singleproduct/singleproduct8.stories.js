@@ -1,11 +1,11 @@
 import React from "react";
-import Singleproduct8 from "../../components/singleProduct/singleproduct8";
+import Minimog from "../../components/singleProduct/minimog";
 
 export default {
-  title: "Singleproduct/Singleproduct8",
-  component: Singleproduct8,
+  title: "Singleproduct/Minimog",
+  component: Minimog,
 };
 
-const Template = (args) => <Singleproduct8 />;
+const Template = (args) => <Minimog />;
 
-export const Singleproduct = Template.bind({});
+export const Minimogs = Template.bind({});

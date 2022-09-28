@@ -15,7 +15,7 @@ import "../../../Font/globalfont.scss";
 import React, { useState } from "react";
 import "./menu.scss";
 
-export default function Minimognavbar() {
+export default function Minimognavbar({ minimog, mainmenu }) {
   const [menubar, setMenubar] = useState(false);
   const Hndle = () => {
     setMenubar(!menubar);
@@ -26,7 +26,7 @@ export default function Minimognavbar() {
         className="flex justify-center text-[14px]
        text-minimog-theme-topbar-title-color p-2 bg-minimog-theme-topbar-bg-color"
       >
-        <h3 className="uppercase font-[500]">
+        <h3 className="uppercase font-[500] tracking-[.05em]">
           cool new color: sterling so worth it
         </h3>
       </div>
@@ -44,142 +44,38 @@ export default function Minimognavbar() {
               className="flex space-x-8 
             justify-center mt-3 text-[16px] font-[500]"
             >
-              <li className="dropdown">
-                <p>
-                  Home <IoIosArrowDown className="mt-1 text-[13px]" />
-                </p>
-                <div className="dropdown-menu text-[#666] space-x-80  p-10 w-full left-0 shadow-xl hidden  right-0 bg-white absolute">
-                  <div className="item space-y-2 text-center ">
-                    <h3>menu1</h3>
-                    <ul className="space-y-5">
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                    </ul>
+              {minimog.mainmenu.map((item) => (
+                <li className="dropdown">
+                  <p>
+                    {item.name} <IoIosArrowDown className="mt-1 text-[13px]" />
+                  </p>
+                  <div className="dropdown-menu text-[#666] space-x-80  p-10 w-full left-0 shadow-xl hidden  right-0 bg-white absolute">
+                    {item.submenu &&
+                      item.submenu.map((sub) => (
+                        <div className="item space-y-2 text-center ">
+                          <ul className="space-y-5">
+                            <li>
+                              <a href="">{sub.title}</a>
+                            </li>
+                          </ul>
+                        </div>
+                      ))}
                   </div>
-                  <div className="item space-y-2 ">
-                    <h3>menu1</h3>
-                    <ul className="space-y-5">
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="item space-y-2 ">
-                    <h3>menu1</h3>
-                    <ul className="space-y-5">
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="item space-y-2 ">
-                    <h3>menu1</h3>
-                    <ul className="space-y-5">
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                      <li>
-                        <a href="">Home</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <a href="" className="flex space-x-1">
-                  <h3>Shop</h3>
-                  <IoIosArrowDown className="mt-1 text-[13px]" />
-                </a>
-              </li>
-              <li>
-                <a href="" className="space-x-1 flex">
-                  <h3>Blogs</h3>
-                  <IoIosArrowDown className="mt-1 text-[13px]" />
-                </a>
-              </li>
-              <li>
-                <a href="" className="space-x-1 flex">
-                  <h3>Products</h3>
-                  <IoIosArrowDown className="mt-1 text-[13px]" />
-                </a>
-              </li>
-              <li>
-                <a href="" className="space-x-1 flex">
-                  <h3>Pages</h3>
-                  <IoIosArrowDown className="mt-1 text-[13px]" />
-                </a>
-              </li>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
         <div className="item  w-[25%] text-[25px] text-minimog-theme-menu-icon-color">
           <div className="mt-3 flex  justify-center space-x-8">
             <div className="">
-              <FaRegUser className="text-[23px]" />
+              <FaRegUser className="text-[20px]" />
             </div>
             <div className="  ">
-              <BsSearch className="text-[23px] " />
+              <BsSearch className="text-[20px] " />
             </div>
             <div className="bdg relative">
-              <FaRegStar />
+              <FaRegStar className="text-[20px] " />
               <div
                 className="bg-minimog-theme-menu-icon-number-bg-color -top-2 right-0
                left-4 bottom-2 absolute text-[13px] font-[800]  rounded-full text-minimog-theme-menu-icon-number-color w-[20px] text-center h-[20px] "
@@ -189,7 +85,7 @@ export default function Minimognavbar() {
             </div>
             <div className=" relative">
               {" "}
-              <MdOutlineShoppingBag />
+              <MdOutlineShoppingBag className="text-[20px] " />
               <div
                 className="bg-minimog-theme-menu-icon-number-bg-color -top-2 right-0
                left-4 bottom-2 absolute text-[13px] font-[800]  rounded-full text-minimog-theme-menu-icon-number-color w-[20px] text-center h-[20px] "
@@ -201,7 +97,7 @@ export default function Minimognavbar() {
         </div>
       </div>
 
-      <div className="md:hidden block mobilemenu p-3 pl-5 pr-8 justify-center bg-white">
+      <div className="md:hidden  block mobilemenu p-3 pl-5 pr-8 justify-center bg-white">
         <div className="row flex justify-between ">
           <div className="item  space-x-4 flex">
             <div className="humbar " onClick={Hndle}>
@@ -236,7 +132,7 @@ export default function Minimognavbar() {
         <div
           className={
             menubar
-              ? "nav-menu space-y-5 absolute top-0 transition-all bottom-0 p-4 duration-1000 left-0 right-0 bg-opacity-75 bg-black"
+              ? "nav-menu z-40 space-y-5 absolute top-0 transition-all bottom-0 p-4 duration-1000 left-0 right-0 bg-opacity-75 bg-black"
               : "hidden -left-[80px]"
           }
         >
@@ -248,27 +144,15 @@ export default function Minimognavbar() {
             }
           >
             <ul className="space-y-8 justify-center mt-5 text-minimog-theme-menu-title-color">
-              <li className=" dropdown">
-                <a href="">Home</a>
-                <ul className="dropdown-menu">
-                  <li>menu</li>
-                  <li>menu</li>
-                  <li>menu</li>
-                  <li>menu</li>
-                </ul>
-              </li>
-              <li>
-                <a href=""></a>Shop
-              </li>
-              <li>
-                <a href=""></a>Blog
-              </li>
-              <li>
-                <a href=""></a>Products
-              </li>
-              <li>
-                <a href=""></a>Pages
-              </li>
+              {minimog.mainmenu.map((item) => (
+                <li className=" dropdown">
+                  <a href="">{item.name}</a>
+                  <ul className="dropdown-menu">
+                    {item.submenu &&
+                      item.submenu.map((sub) => <li>{sub.title}</li>)}
+                  </ul>
+                </li>
+              ))}
             </ul>
             <div className="log space-y-4">
               <input
