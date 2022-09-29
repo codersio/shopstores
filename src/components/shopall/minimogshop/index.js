@@ -1,13 +1,38 @@
+import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useState } from "react";
+
 export default function Minimogshop() {
+  const [sidebardropdown, setSidebarDropdown] = useState(true);
+  const [sidebardropdowncolor, setSidebardropdowncolor] = useState(true);
+  const Handlesidebar = () => {
+    setSidebarDropdown(!sidebardropdown);
+  };
+  const Handlesidebarcolor = () => {
+    setSidebardropdowncolor(!sidebardropdowncolor);
+  };
   return (
     <div className="filtersofminimog font-minimog-theme-font  ">
-      <div className="item space-y-10 w-[25%]   border-2 border-black">
+      <div className="item space-y-10 w-[22%] p-8   ">
         <h3 className="text-[34px] text-minimog-theme-title-color">Filters</h3>
-        <div className="sizeall min-w-fit">
-          <div className="flex">
-            <h3>Size</h3>
+        <div className="sizeall min-w-fit space-y-4">
+          <div className="flex justify-between">
+            <h3 className="text-[18px] text-minimog-theme-title-color font-[600]">
+              Size
+            </h3>
+            {sidebardropdown ? (
+              <FontAwesomeIcon icon={faMinus} onClick={Handlesidebar} />
+            ) : (
+              <FontAwesomeIcon icon={faPlus} onClick={Handlesidebar} />
+            )}
           </div>
-          <div className="item  flex flex-wrap   ">
+          <div
+            className={
+              sidebardropdown
+                ? "item  flex flex-wrap transition duration-300 ease-in-out  "
+                : "hidden"
+            }
+          >
             <div className="m-1">
               <button className="border rounded-lg p-3 text-[18px]">
                 Iphone 11 Pro case
@@ -35,12 +60,25 @@ export default function Minimogshop() {
         </div>
 
         {/* ENDOF PRODUC SIZE */}
-        <div className="color">
-          <div className="flex">
-            <h3>Color</h3>
+        <div className="color space-y-4">
+          <div className="flex justify-between">
+            <h3 className="text-[18px] text-minimog-theme-title-color font-[600]">
+              Color
+            </h3>
+            {sidebardropdowncolor ? (
+              <FontAwesomeIcon icon={faMinus} onClick={Handlesidebarcolor} />
+            ) : (
+              <FontAwesomeIcon icon={faPlus} onClick={Handlesidebarcolor} />
+            )}
           </div>
           <div className="item ">
-            <div className="div flex flex-wrap ">
+            <div
+              className={
+                sidebardropdowncolor
+                  ? "div flex flex-wrap duration-700 transition-transform"
+                  : "hidden duration-700 transition-transform"
+              }
+            >
               <div className="w-[30px] h-[30px] m-1 bg-black rounded-full"></div>
               <div className="w-[30px] h-[30px] m-1 bg-black rounded-full"></div>
               <div className="w-[30px] h-[30px] m-1 bg-black rounded-full"></div>
@@ -62,10 +100,12 @@ export default function Minimogshop() {
 
         <div className="category space-y-4">
           <div className="flex">
-            <h3>Categories</h3>
+            <h3 className="text-[18px] text-minimog-theme-title-color font-[600]">
+              Categories
+            </h3>
           </div>
-          <div className="item h-[14rem] scrollbar-thin scrollbar-thumb-blue-700 scrollbar-track-blue-300  overflow-y-scroll  ">
-            <ul className="text-[16px] space-y-2">
+          <div className="item h-[14rem] scrollbar-thin scrollbar-thumb-[#aaa] scrollbar-track-[#eee]  overflow-y-scroll  ">
+            <ul className="text-[16px] space-y-2 text-minimog-theme-default-title-color">
               <li>
                 <a href="">Houseware (5)</a>
               </li>
@@ -104,12 +144,14 @@ export default function Minimogshop() {
         </div>
 
         {/* ENDOF PRODUC CATEGORY */}
-        <div className="Price">
+        <div className="Price space-y-4">
           <div className="flex">
-            <h3>Price</h3>
+            <h3 className="text-[18px] text-minimog-theme-title-color font-[600]">
+              Price
+            </h3>
           </div>
           <div className="item">
-            <ul className="text-[16px]">
+            <ul className="text-[16px] space-y-2 text-minimog-theme-default-title-color">
               <li>
                 <a href="">$0.00 – $470.00</a>
               </li>
@@ -129,12 +171,14 @@ export default function Minimogshop() {
           </div>
         </div>
         {/* ENDOF PRODUC price */}
-        <div className="Brand">
+        <div className="Brand space-y-4">
           <div className="flex">
-            <h3>Brand</h3>
+            <h3 className="text-[18px] text-minimog-theme-title-color font-[600]">
+              Brand
+            </h3>
           </div>
           <div className="item">
-            <ul className="text-[16px]">
+            <ul className="text-[16px] space-y-2 text-minimog-theme-default-title-color">
               <li>
                 <a href="">Abby (41)</a>
               </li>
