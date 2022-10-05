@@ -5,15 +5,27 @@ import React, { useState } from "react";
 export default function Minimogshop() {
   const [sidebardropdown, setSidebarDropdown] = useState(true);
   const [sidebardropdowncolor, setSidebardropdowncolor] = useState(true);
+  const [sidebardropdowncategory, setSidebardropdowncategory] = useState(true);
+  const [sidebardropdownprice, setSidebardropdownprice] = useState(true);
+  const [sidebardropdownbrand, setSidebardropdownbrand] = useState(true);
   const Handlesidebar = () => {
     setSidebarDropdown(!sidebardropdown);
   };
   const Handlesidebarcolor = () => {
     setSidebardropdowncolor(!sidebardropdowncolor);
   };
+  const Handlesidebarcategory = () => {
+    setSidebardropdowncategory(!sidebardropdowncategory);
+  };
+  const Handlesidebarprice = () => {
+    setSidebardropdownprice(!sidebardropdownprice);
+  };
+  const Handlesidebarbrand = () => {
+    setSidebardropdownbrand(!sidebardropdownbrand);
+  };
   return (
     <div className="filtersofminimog font-minimog-theme-font  ">
-      <div className="item space-y-10 w-[22%] p-8   ">
+      <div className="item space-y-10  p-8   ">
         <h3 className="text-[34px] text-minimog-theme-title-color">Filters</h3>
         <div className="sizeall min-w-fit space-y-4">
           <div className="flex justify-between">
@@ -29,8 +41,8 @@ export default function Minimogshop() {
           <div
             className={
               sidebardropdown
-                ? "item  flex flex-wrap transition duration-300 ease-in-out  "
-                : "hidden"
+                ? "item  flex flex-wrap  duration-1000 ease-in  "
+                : "hidden  duration-1000 ease-out"
             }
           >
             <div className="m-1">
@@ -99,10 +111,15 @@ export default function Minimogshop() {
         {/* ENDOF PRODUC COLOR */}
 
         <div className="category space-y-4">
-          <div className="flex">
+          <div className="flex justify-between">
             <h3 className="text-[18px] text-minimog-theme-title-color font-[600]">
               Categories
             </h3>
+            {sidebardropdowncategory ? (
+              <FontAwesomeIcon icon={faMinus} onClick={Handlesidebarcategory} />
+            ) : (
+              <FontAwesomeIcon icon={faPlus} onClick={Handlesidebarcategory} />
+            )}
           </div>
           <div className="item h-[14rem] scrollbar-thin scrollbar-thumb-[#aaa] scrollbar-track-[#eee]  overflow-y-scroll  ">
             <ul className="text-[16px] space-y-2 text-minimog-theme-default-title-color">
@@ -145,13 +162,24 @@ export default function Minimogshop() {
 
         {/* ENDOF PRODUC CATEGORY */}
         <div className="Price space-y-4">
-          <div className="flex">
+          <div className="flex justify-between">
             <h3 className="text-[18px] text-minimog-theme-title-color font-[600]">
               Price
             </h3>
+            {sidebardropdownprice ? (
+              <FontAwesomeIcon icon={faMinus} onClick={Handlesidebarprice} />
+            ) : (
+              <FontAwesomeIcon icon={faPlus} onClick={Handlesidebarprice} />
+            )}
           </div>
           <div className="item">
-            <ul className="text-[16px] space-y-2 text-minimog-theme-default-title-color">
+            <ul
+              className={
+                sidebardropdownprice
+                  ? "text-[16px] space-y-2 text-minimog-theme-default-title-color"
+                  : "hidden"
+              }
+            >
               <li>
                 <a href="">$0.00 – $470.00</a>
               </li>
@@ -172,13 +200,24 @@ export default function Minimogshop() {
         </div>
         {/* ENDOF PRODUC price */}
         <div className="Brand space-y-4">
-          <div className="flex">
+          <div className="flex justify-between">
             <h3 className="text-[18px] text-minimog-theme-title-color font-[600]">
               Brand
             </h3>
+            {sidebardropdownbrand ? (
+              <FontAwesomeIcon icon={faMinus} onClick={Handlesidebarbrand} />
+            ) : (
+              <FontAwesomeIcon icon={faPlus} onClick={Handlesidebarbrand} />
+            )}
           </div>
           <div className="item">
-            <ul className="text-[16px] space-y-2 text-minimog-theme-default-title-color">
+            <ul
+              className={
+                sidebardropdownbrand
+                  ? "text-[16px] space-y-2 text-minimog-theme-default-title-color"
+                  : "hidden"
+              }
+            >
               <li>
                 <a href="">Abby (41)</a>
               </li>

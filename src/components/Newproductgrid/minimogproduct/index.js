@@ -4,19 +4,32 @@ import React, { useState } from "react";
 import "./style.scss";
 import { RiArrowLeftRightFill } from "react-icons/ri";
 import { ImEye } from "react-icons/im";
-export default function Minimogpro({ minimog }) {
+export default function Minimogpro({ minimog, twouitem }) {
   const [colorproduct, setColorproduct] = useState(1);
   return (
     <>
       {minimog ? (
         // DYNAMIC WITH PROPS WISE
-        <div className="minimog-product grid grid-cols-2 md:grid-cols-5 font---minimog-theme-font">
+        <div
+          className={
+            twouitem == 2
+              ? "minimog-product grid grid-cols-2 md:grid-cols-2 font---minimog-theme-font"
+              : twouitem == 3
+              ? "minimog-product grid grid-cols-2 md:grid-cols-3 font---minimog-theme-font"
+              : twouitem == 4
+              ? "minimog-product grid grid-cols-2 md:grid-cols-4 font---minimog-theme-font"
+              : "minimog-product grid grid-cols-2 md:grid-cols-4 font---minimog-theme-font"
+          }
+        >
           {minimog.product.map((item) => (
-            <div className="cols-item space-y-3 p-3">
-              <div className="image overflow-hidden group relative flex justify-center group-hover:opacity-50">
+            <div className="cols-item space-y-3 p-3 ">
+              <div
+                className="image overflow-hidden group
+               relative flex justify-center group-hover:opacity-50"
+              >
                 {item.colorid == null ? (
                   <img
-                    className="scale-100 hover:scale-110 duration-300 "
+                    className="scale-125 hover:scale-150 duration-300 "
                     src={item.image}
                     alt=""
                   />
@@ -24,7 +37,7 @@ export default function Minimogpro({ minimog }) {
                   item.color.map((col) =>
                     colorproduct == col.id ? (
                       <img
-                        className="scale-100 hover:scale-110 duration-300 "
+                        className="scale-125 hover:scale-150 duration-300"
                         src={col.image}
                         alt=""
                       />
@@ -38,8 +51,10 @@ export default function Minimogpro({ minimog }) {
                     type="button"
                     value="Add To Cart"
                     className="w-[80%] opacity-0 -bottom-[28rem] 
-            duration-300 group-hover:opacity-100 absolute rounded-lg font-[500] group-hover:bottom-5 
-              bg-minimog-theme-card-cartbutton-bg-color text-minimog-theme-cartbutton-title-color p-2"
+            duration-300 group-hover:opacity-100 absolute rounded-lg 
+            font-[500] group-hover:bottom-5 
+              bg-minimog-theme-card-cartbutton-bg-color 
+              text-minimog-theme-cartbutton-title-color p-2"
                   />
                 ) : (
                   <input

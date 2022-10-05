@@ -2,15 +2,16 @@ import { faEye, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 
-export default function Loginmodal() {
+export default function Loginmodal({ logmodal, setLogmodal }) {
   const [tabsbt, setTabs] = useState(0);
 
   const Login = () => {
     return (
       <div className="space-y-6">
-        <h3 className="uppercase text-[14px] font-[600] ">
-          login to your account
-        </h3>
+        <h3 className="text-[36px]">Sign In</h3>
+        <p className="text-[16px] text-[#666]">
+          Don't have an account yet? Sign up for free
+        </p>
 
         <input
           type="text"
@@ -53,9 +54,10 @@ export default function Loginmodal() {
   const Register = () => {
     return (
       <div className="space-y-6">
-        <h3 className="uppercase text-[14px] font-[600] ">
-          Register to your account
-        </h3>
+        <h3 className="text-[36px]">Sign In</h3>
+        <p className="text-[16px] text-[#666]">
+          Don't have an account yet? Sign up for free
+        </p>
         <input
           type="text"
           value="First name"
@@ -104,21 +106,24 @@ export default function Loginmodal() {
     );
   };
   return (
-    <div className="login-container grid place-items-center bg-black bg-opacity-75 absolute top-0 right-0 bottom-0 left-0">
+    <div
+      className={
+        logmodal
+          ? " z-10 overflow-hidden login-container grid place-items-center bg-black bg-opacity-75 fixed top-0 right-0 bottom-0 left-0"
+          : "hidden"
+      }
+    >
       <div className="fomr text-center bg-white w-[45%] space-y-6 relative ">
-        <h3 className="text-[36px]">Sign In</h3>
-        <p className="text-[16px] text-[#666]">
-          Don't have an account yet? Sign up for free
-        </p>
         <div className="close  space-y-3">
           <div
+            onClick={() => setLogmodal(!logmodal)}
             className="text-right p-3 w-[50px] h-[50px]
             bg-white grid place-items-center 
             absolute text-[1.3rem] -top-7 rounded-full -right-8 shadow-2xl text-black "
           >
             <FontAwesomeIcon icon={faXmark} />
           </div>
-          <hr />
+          {/* <hr /> */}
         </div>
 
         <div className="space-y-6 p-5">

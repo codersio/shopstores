@@ -13,47 +13,64 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faStar } from "@fortawesome/free-regular-svg-icons";
 import { FaRegEye } from "react-icons/fa";
 import { ImEye } from "react-icons/im";
-export default function Minimog() {
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+export default function Minimog({ minimog }) {
   const [thumbsclick, setThumbs] = useState(0);
+  const [tabsd, setTabs] = useState(1);
   return (
     <div className="container font-minimog-theme-font p-3 md:p-12">
-      <div className="container-child md:flex md:space-x-10">
+      <div className="container-child md:flex md:space-x-20">
         <div className="row md:w-[50%] ">
-          <div className="productzoom flex space-x-2">
+          <div className="productzoom flex ">
             <div className="item thmbs w-[25%] space-y-2">
-              <img
-                onClick={() => setThumbs(0)}
-                className={
-                  thumbsclick == 0 ? "w-[68%] border border-black" : "w-[68%]"
-                }
-                src="https://minimog-4437.kxcdn.com/wp-content/uploads/2021/12/product_fashion_15_a_4-570x760.jpg"
-                alt=""
-              />
-              <img
-                onClick={() => setThumbs(1)}
-                className={
-                  thumbsclick == 1 ? "w-[68%] border border-black" : "w-[68%]"
-                }
-                src="https://minimog-4437.kxcdn.com/wp-content/uploads/2021/12/product_fashion_15_a_6-570x760.jpg"
-                alt=""
-              />
+              {minimog.productsingleimage.map((imt, idx) => (
+                <img
+                  key={idx}
+                  onClick={() => setThumbs(idx)}
+                  className={
+                    idx == thumbsclick
+                      ? "w-[68%] border border-black"
+                      : "w-[68%]"
+                  }
+                  src={imt.image}
+                  alt=""
+                />
+              ))}
             </div>
-            <div className="bg-thumbs">
-              {thumbsclick == 0 ? (
-                <img
-                  className="w-[85%]"
-                  src="https://minimog-4437.kxcdn.com/wp-content/uploads/2021/12/product_fashion_15_a_4-570x760.jpg"
-                  alt=""
-                />
-              ) : thumbsclick == 1 ? (
-                <img
-                  className="w-[85%]"
-                  src="https://minimog-4437.kxcdn.com/wp-content/uploads/2021/12/product_fashion_15_a_6-570x760.jpg"
-                  alt=""
-                />
-              ) : (
-                <div></div>
-              )}
+            <div className="bg-thumbs overflow-hidden relative group group-hover:opacity-50">
+              <img src={minimog.productsingleimage[thumbsclick].image} alt="" />
+
+              {minimog.productsingleimage.map((imgbg, idx) => (
+                <div>
+                  <div
+                    onClick={() =>
+                      idx == thumbsclick ? (
+                        setThumbs(console.log(idx.length - 1))
+                      ) : (
+                        <></>
+                      )
+                    }
+                    // onClick={() => setThumbs(1+1)}
+                    className="w-[45px] h-[45px] text-[18px]
+               grid place-items-center rounded-full
+                group-hover:opacity-100 bg-white shadow-2xl
+                 absolute duration-500 top-[50%] group-hover:left-6 -left-[18rem] "
+                  >
+                    <FontAwesomeIcon icon={faArrowRight} />
+                  </div>
+                  <div
+                    onClick={() => setThumbs(idx + 1)}
+                    className="w-[45px] h-[45px] text-[18px]
+               grid group-hover:opacity-100
+                place-items-center rounded-full duration-500
+                 bg-white shadow-2xl absolute top-[50%]
+                 group-hover:right-6 -right-[28rem]"
+                  >
+                    {" "}
+                    <FontAwesomeIcon icon={faArrowLeft} />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -101,6 +118,28 @@ export default function Minimog() {
               people are viewing this right now
             </h3>
           </div>
+          <div className="color space-y-3">
+            <h3 className="text-[16px] font-[600]">
+              Color : <span className="font-[400]">Black</span>
+            </h3>
+
+            <div className="cplpr flex space-x-3">
+              <div className="item w-[35px] bg-blue-600 rounded-full h-[35px]"></div>
+              <div className="item w-[35px] bg-green-600 rounded-full h-[35px]"></div>
+            </div>
+          </div>
+          <div className="size space-y-3">
+            <h3 className="text-[16px] font-[600]">
+              Size : <span className="font-[400]">36</span>
+            </h3>
+
+            <div className="cplpr flex space-x-3">
+              <div className="s w-[45px] h-[45px] rounded-md hover:border-black border grid place-items-center">
+                36
+              </div>
+            </div>
+          </div>
+
           <div className="qty mt-3 space-y-4">
             <h3 className="text-[16px] text-minimog-theme-title-color">
               Quantity
@@ -138,7 +177,7 @@ export default function Minimog() {
               <input
                 type="button"
                 value="Add to cart"
-                className="w-full font-[500] rounded-md border border-minimog-theme-border-color text-center text-minimog-theme-button-bg-title-color text-sm p-3"
+                className="w-full font-[500] rounded-md border border-minimog-theme-border-color text-center text-minimog-theme-button-title-color text-sm p-3"
               />
             </div>
           </div>
@@ -202,76 +241,42 @@ export default function Minimog() {
           </div>
         </div>
       </div>
-      <div className="mt-6">
-        <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
-          <ul
-            class="flex flex-wrap -mb-px text-sm font-medium text-center"
-            id="myTab"
-            data-tabs-toggle="#myTabContent"
-            role="tablist"
-          >
-            <li class="mr-2" role="presentation">
-              <button
-                class="inline-block p-4 
-                 rounded-t-lg border-b-2 text-black
-                  hover:text-blue-600 dark:text-blue-500
-                   dark:hover:text-blue-500
-                 border-minimog-theme-bottomline-color dark:border-yellow-500"
-                id="profile-tab"
-                data-tabs-target="#profile"
-                type="button"
-                role="tab"
-                aria-controls="profile"
-                aria-selected="true"
-              >
-                DESCRIPTION
-              </button>
+      <div className="mt-6 ">
+        <ul className="flex  space-x-16 border-b ">
+          {minimog.tabsdes.map((item) => (
+            <li
+              onClick={() => setTabs(item.id)}
+              className={
+                tabsd == item.id
+                  ? "text-[18px] font-[600] cursor-pointer duration-1000 border-b border-black py-2"
+                  : " cursor-pointer py-2 text-minimog-theme-default-title-color font-[600] text-[18px]"
+              }
+            >
+              {item.name}
             </li>
-            <li class="mr-2" role="presentation">
-              <button
-                className="  inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-black dark:text-gray-400 border-gray-100 dark:border-gray-700"
-                id="dashboard-tab"
-                data-tabs-target="#dashboard"
-                type="button"
-                role="tab"
-                aria-controls="dashboard"
-                aria-selected="false"
-              >
-                REVIEW
-              </button>
-            </li>
-          </ul>
-        </div>
-        <div id="myTabContent">
-          <div
-            class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800"
-            id="profile"
-            role="tabpanel"
-            aria-labelledby="profile-tab"
-          >
-            <p class="text-base text-minimog-theme-default-title-color dark:text-gray-400">
-              Finding the right short can be hard—we made it easy. Super
-              lightweight with a comfortable elastic waist, the Easy Chino Short
-              was designed in a casual, relaxed fit that’s not too short and not
-              too long. Just pull on and go
-            </p>
-          </div>
-          <div
-            class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800"
-            id="dashboard"
-            role="tabpanel"
-            aria-labelledby="dashboard-tab"
-          >
-            <p class="text-sm text-gray-500 dark:text-gray-400">
-              This is some placeholder content the{" "}
-              <strong class="font-medium text-gray-800 dark:text-white">
-                Dashboard tab's associated content
-              </strong>
-              . Clicking another tab will toggle the visibility of this one for
-              the next. The tab JavaScript swaps classes to control the content
-              visibility and styling.
-            </p>
-          </div>
+          ))}
+        </ul>
+
+        <div className="mt-8">
+          {minimog.tabsdes.map((des) => (
+            <div>
+              {tabsd == des.id ? (
+                <div className="space-y-5">
+                  <h3 className="text-[24px] font-[600] text-minimog-theme-title-color">
+                    {des.deta.title}
+                  </h3>
+                  <p>{des.deta.description}</p>
+                  {/* <div className="flex space-x-4">
+                    {des.deta.image.map((im) => (
+                      <img src={im.image} alt="" />
+                    ))}
+                  </div> */}
+                </div>
+              ) : (
+                <p></p>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </div>

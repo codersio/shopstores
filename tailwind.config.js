@@ -136,7 +136,7 @@ module.exports = {
           "var(--minimog-theme-cartbutton-title-color)",
         "minimog-theme-button-title-border-color":
           "var(--minimog-theme-button-title-color)",
-        "minimog-theme-button-bg-title--color":
+        "minimog-theme-button-bg-title-color":
           "var(--minimog-theme-button-bg-title-color)",
         "minimog-theme-button-bg-color": "var(--minimog-theme-button-bg-color)",
         "minimog-theme-default-price-color":
@@ -401,6 +401,10 @@ module.exports = {
           "var(--cosmetica-theme-input-title-color)",
         "cosmetica-theme-input-title-color":
           "var(--cosmetica-theme-input-title-color)",
+      },
+      cursor: {
+        fancy:
+          "url(https://thumbs.dreamstime.com/b/close-button-vector-icon-close-button-symbol-delete-cross-circle-close-button-vector-icon-close-button-symbol-delete-cross-139159801.jpgZ)",
       },
     },
   },

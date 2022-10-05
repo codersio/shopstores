@@ -13,15 +13,33 @@ import { BsSearch } from "react-icons/bs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../../Font/globalfont.scss";
 import React, { useState } from "react";
+import Minimogcarmodal from "../../productdropdowncart/minimog";
 import "./menu.scss";
-
+import Loginmodal from "../../logincomnent/loginmodal";
+import Minimogsearch from "../../searchmodal/minimogsearchmodal";
 export default function Minimognavbar({ minimog, mainmenu }) {
   const [menubar, setMenubar] = useState(false);
+  const [searchmodal, setSearchmodal] = useState(false);
+  const [logmodal, setLogmodal] = useState(false);
+  const [cartmodal, seCart] = useState(false);
   const Hndle = () => {
-    setMenubar(!menubar);
+    seCart(!menubar);
+  };
+  const Hndlecartmodal = () => {
+    seCart(!cartmodal);
   };
   return (
     <div className="menybar font-minimog-theme-font">
+      <Loginmodal logmodal={logmodal} setLogmodal={setLogmodal} />
+      <Minimogsearch
+        searchmodal={searchmodal}
+        setSearchmodal={setSearchmodal}
+      />
+      <Minimogcarmodal
+        cartmodal={cartmodal}
+        Hndlecartmodal={Hndlecartmodal}
+        seCart={seCart}
+      />
       <div
         className="flex justify-center text-[14px]
        text-minimog-theme-topbar-title-color p-2 bg-minimog-theme-topbar-bg-color"
@@ -68,10 +86,10 @@ export default function Minimognavbar({ minimog, mainmenu }) {
         </div>
         <div className="item  w-[25%] text-[25px] text-minimog-theme-menu-icon-color">
           <div className="mt-3 flex  justify-center space-x-8">
-            <div className="">
+            <div className="" onClick={() => setLogmodal(!logmodal)}>
               <FaRegUser className="text-[20px]" />
             </div>
-            <div className="  ">
+            <div className="  " onClick={() => setSearchmodal(!searchmodal)}>
               <BsSearch className="text-[20px] " />
             </div>
             <div className="bdg relative">
@@ -85,7 +103,10 @@ export default function Minimognavbar({ minimog, mainmenu }) {
             </div>
             <div className=" relative">
               {" "}
-              <MdOutlineShoppingBag className="text-[20px] " />
+              <MdOutlineShoppingBag
+                className="text-[20px] "
+                onClick={Hndlecartmodal}
+              />
               <div
                 className="bg-minimog-theme-menu-icon-number-bg-color -top-2 right-0
                left-4 bottom-2 absolute text-[13px] font-[800]  rounded-full text-minimog-theme-menu-icon-number-color w-[20px] text-center h-[20px] "
@@ -156,6 +177,7 @@ export default function Minimognavbar({ minimog, mainmenu }) {
             </ul>
             <div className="log space-y-4">
               <input
+                onClick={() => setLogmodal(!logmodal)}
                 type="button"
                 value="Login"
                 className="w-full rounded-md bg-minimog-theme-button-bg-color text-minimog-theme-default-title-color p-2"

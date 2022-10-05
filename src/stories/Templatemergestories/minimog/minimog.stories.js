@@ -1,4 +1,4 @@
-import MinimogTemplate from "../../components/Tmplatefilemerge/Minimog";
+import MinimogTemplate from "../../../components/Tmplatefilemerge/Minimog";
 
 export default {
   title: "Templateengine/MinimogTemplate",
