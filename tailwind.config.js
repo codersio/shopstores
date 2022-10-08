@@ -402,10 +402,10 @@ module.exports = {
         "cosmetica-theme-input-title-color":
           "var(--cosmetica-theme-input-title-color)",
       },
-      cursor: {
-        fancy:
-          "url(https://thumbs.dreamstime.com/b/close-button-vector-icon-close-button-symbol-delete-cross-circle-close-button-vector-icon-close-button-symbol-delete-cross-139159801.jpgZ)",
-      },
+      // cursor: {
+      //   fancy:
+      //     "url(https://thumbs.dreamstime.com/b/close-button-vector-icon-close-button-symbol-delete-cross-circle-close-button-vector-icon-close-button-symbol-delete-cross-139159801.jpgZ)",
+      // },
     },
   },
   plugins: [require("flowbite/plugin"), require("tailwind-scrollbar")],

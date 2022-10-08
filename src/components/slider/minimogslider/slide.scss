@@ -1,0 +1,12 @@
+.slide-righta{
+animation: 3s slidein-right;
+}
+
+@keyframes slidein-right {
+  from{
+    margin-left: -100%;
+  }
+  to{
+    margin-left: 0%;
+  }
+}

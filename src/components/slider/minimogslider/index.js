@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "animate.css";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+// import "animate.css";
+import "./slide.scss"
+import Animate from 'animate.css-react'
+import 'animate.css/animate.css'
 import { Carousel } from "react-responsive-carousel";
 export default function Minimogslider({
   swipeable,
@@ -29,12 +31,17 @@ export default function Minimogslider({
       {minimog.slider.map((i) => (
         <div>
           <img
-            className="w-full animate__animated animate__bounce "
+            className="w-full  "
             src={i.image}
           />
-          <h1 class="animate__animated animate__bounce animate__delay-5s">
+          <Animate
+
+              appear="fadeInDown"
+              durationAppear={1000}
+              component="div"><h1 className="">
             An animated element
-          </h1>
+          </h1></Animate>
+
         </div>
       ))}
     </Carousel>
