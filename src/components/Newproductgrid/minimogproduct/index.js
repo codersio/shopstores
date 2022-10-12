@@ -4,9 +4,12 @@ import React, { useState } from "react";
 import "./style.scss";
 import { RiArrowLeftRightFill } from "react-icons/ri";
 import { ImEye } from "react-icons/im";
+import {Link} from "gatsby"
 import Minimodata from "../../../pages/Minimogtheme/Minimodata.json";
 export default function Minimogpro({ minimog, twouitem,Minimodata }) {
   const [colorproduct, setColorproduct] = useState(1);
+
+
   return (
     <>
       {Minimodata ? (
@@ -58,13 +61,15 @@ export default function Minimogpro({ minimog, twouitem,Minimodata }) {
               text-minimog-theme-cartbutton-title-color p-2"
                   />
                 ) : (
-                  <input
-                    type="button"
-                    value="Select Options"
-                    className="w-[80%] opacity-0 -bottom-[28rem] 
-            duration-300 group-hover:opacity-100 absolute rounded-lg font-[500] group-hover:bottom-5 
-              bg-minimog-theme-card-cartbutton-bg-color text-minimog-theme-cartbutton-title-color p-2"
-                  />
+                    <a href=""  type="button"
+
+                       className="w-[80%] opacity-0 -bottom-[28rem] text-center
+            duration-300 group-hover:opacity-100 absolute rounded-lg font-[500] group-hover:bottom-5
+              bg-minimog-theme-card-cartbutton-bg-color text-minimog-theme-cartbutton-title-color p-2">
+                      <Link to="/Minimogtheme/minimogsingle">
+                        Select Options
+                      </Link>
+                    </a>
                 )}
                 <div className="icon space-y-3 absolute -right-[25rem] duration-300 group-hover:right-4 top-6 opacity-0 group-hover:opacity-100">
                   <div

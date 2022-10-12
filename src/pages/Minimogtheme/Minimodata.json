@@ -113,5 +113,60 @@
       "colorid": null,
       "image": "https://minimog-4437.kxcdn.com/wp-content/uploads/2021/12/product_fashion_07_2-450x600.jpg"
     }
+  ],
+
+  "productsingleimage": [
+    {
+      "id": 1,
+      "image":
+      "https://minimog-4437.kxcdn.com/wp-content/uploads/2021/12/product_fashion_15_a_4-570x760.jpg"
+    },
+    {
+      "id": 2,
+      "image":
+      "https://minimog-4437.kxcdn.com/wp-content/uploads/2021/12/product_fashion_15_a_6-570x760.jpg"
+    },
+    {
+      "id": 3,
+      "image":
+      "https://minimog-4437.kxcdn.com/wp-content/uploads/2021/12/product_fashion_04_3-570x760.jpg"
+    },
+    {
+      "id": 4,
+      "image":
+      "https://minimog-4437.kxcdn.com/wp-content/uploads/2021/12/product_fashion_04_2-570x760.jpg"
+    }
+  ],
+
+  "tabsdes": [
+    {
+      "id": 1,
+      "name": "Shipping and Returns",
+      "deta": {
+        "id": 1,
+        "title": null,
+        "description":
+        "Shipping cost is based on weight. Just add products to your cart and use the Shipping Calculator to see the shipping price. We want you to be 100% satisfied with your purchase. Items can be returned or exchanged within 30 days of delivery."
+      }
+    },
+    {
+      "id": 2,
+      "name": "Product details",
+      "deta": {
+        "id": 2,
+        "title": "The Iconic Silhouette",
+        "description":
+        "He garments labelled as Committed are products that have been produced using sustainable fibers or processes, reducing their environmental impact. Mango’s goal is to support the implementation of practices more committed to the environment, and therefore increase the number of sustainable garments in the collection."
+      }
+    },
+    {
+      "id": 3,
+      "name": "Review",
+      "deta": {
+        "id": 3,
+        "title": null,
+        "description": null
+      }
+    }
   ]
 }

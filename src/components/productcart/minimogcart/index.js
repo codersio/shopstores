@@ -10,7 +10,7 @@ import { HiOutlineMinus } from "react-icons/hi";
 import { BsPlus } from "react-icons/bs";
 import React from "react";
 import "./style.scss";
-export default function Minimog() {
+export default function Minimogcart() {
   return (
     <div className="container  p-5 md:space-y-5 font-minimog-theme-font space-y-14">
       <div className="row md:block flex md:space-x-0 space-x-2">
@@ -65,7 +65,7 @@ export default function Minimog() {
                     <h3 className="text-[16px] font-[500] text-minimog-theme-title-color ">
                       Wool-blend Jacket
                     </h3>
-                    <p className="text-[14px] text-minimog-theme-delete-button-color font-medium">
+                    <p className="text-[14px] text-minimog-theme-delete-button-color ">
                       Remove
                     </p>
                   </div>
@@ -160,7 +160,7 @@ export default function Minimog() {
         </div>
       </div>
       <div className="row  flex  justify-center  md:justify-end mt-5">
-        <div className="div w-full md:w-[35%] shadow-lg md:p-6 p-3 pt-3">
+        <div className="div w-full md:w-[30%] shadow-lg md:p-6 p-3 pt-3">
           <table class="border-collapse  w-full  table-auto    text-sm">
             <thead>
               <tr>
@@ -293,7 +293,7 @@ export default function Minimog() {
           <input
             type="button"
             value="Checkout"
-            className="w-full bg-minimog-theme-button-bg-color text-minimog-theme-button-title-color p-3 rounded-md"
+            className="w-full bg-minimog-theme-checkoutbtn-bg-color text-minimog-theme-button-bg-title-color p-2 rounded-md"
           />
         </div>
       </div>

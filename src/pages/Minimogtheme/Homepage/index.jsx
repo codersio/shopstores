@@ -7,11 +7,12 @@ import Minimogslider from "../../../components/slider/minimogslider";
 import Minimogproduct from "../../../components/Newproductgrid/minimogproduct";
 import Minimogfooter from "../../../components/Footer/minimogfooter";
 import Minimoground from "../../../components/newCategories/minimoground";
+import {Link} from "gatsby"
 export default function Minimogtheme(){
     const [logmodal,setLogmodal]=useState(false)
 
 
-    return(<div>
+    return(<div className="font-minimog-theme-font">
 
         <Minimognavbar logmodal={logmodal} Minimodata={Minimodata} setLogmodal={setLogmodal}/>
         <Minimogslider Minimodata={Minimodata}/>
@@ -47,7 +48,7 @@ export default function Minimogtheme(){
                 </div>
                 <div className="button-section grid place-items-center">
                     <button className="p-3 rounded-lg border-minimog-theme-border-color border w-[10%] text-center">
-                        Shop Now
+                       <Link to="/Minimogtheme/mshopp">Shop Now</Link>
                     </button>
                 </div>
             </div>

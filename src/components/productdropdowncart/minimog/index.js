@@ -2,6 +2,9 @@ import { faStar } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { GrClose } from "react-icons/gr";
+import { HiOutlineMinus } from "react-icons/hi";
+import { BsPlus } from "react-icons/bs";
+import {Link} from "gatsby"
 import "./style.scss";
 import {
   faPen,
@@ -51,7 +54,10 @@ export default function Minimog({ cartmodal, seCart, Hndlecartmodal }) {
               </span>
             </h3>
             <div className=" relative cartmodal-hr w-full h-[7px] bg-minimog-theme-default-bg-color rounded-md">
-              <div className="absolute border -top-[0.8rem] left-[2rem]  grid place-items-center rounded-full w-[30px] h-[30px] bg-white border-minimog-theme-prgressbaractive-bg-color">
+              <div className="absolute border -top-[0.8rem] left-[2rem]
+                grid place-items-center
+                 rounded-full w-[30px]
+                  h-[30px] bg-white border-minimog-theme-prgressbaractive-bg-color">
                 <FontAwesomeIcon
                   icon={faStar}
                   className="text-minimog-theme-prgressbaractive-bg-color"
@@ -68,7 +74,7 @@ export default function Minimog({ cartmodal, seCart, Hndlecartmodal }) {
                 />
               </div>
               <div className="item  ">
-                <h3 className="text-[16px] text-minimog-theme-title-color font-[500]">
+                <h3 className="text-[16px] text-minimog-theme-title-color ">
                   Wool-blend Jacket
                 </h3>
                 <h3 className="text-minimog-theme-title-color">
@@ -88,36 +94,36 @@ export default function Minimog({ cartmodal, seCart, Hndlecartmodal }) {
 
                 <div className="flex space-x-5">
                   <div
-                    className="   border-minimog-theme-button-bg-color mt-3
-                   rounded-md bg-minimog-theme-button-bg-color bottom-2 w-[55%]  
+                    className="   border-minimog-theme-button-qty-text-color mt-3
+                   rounded-md bg-minimog-theme-default-bg-color bottom-2 w-[55%]
                      px-3 h-[41px]    
                        text-minimog-theme-button-qty-text-color   flex text-xl   leading-9 
                      justify-between text-center   "
                     // onClick={ClickButton}
                   >
                     <div
-                      className=" -mt-2 cursor-pointer   bottom-4 text-[2rem] grid place-items-center "
+                      className=" grid place-items-center cursor-pointer   bottom-4 text-[0.9rem]  "
                       // style={{ marginTop: "-8px" }}
                     >
-                      -
+                     <HiOutlineMinus/>
                     </div>
                     <div
                       className="shrink block
                     w-16 text-minimog-theme-button-qty-text-color"
                     >
                       <div
-                        className="block m-auto
+                        className=" grid place-items-center
                      text-[1rem] mt-[0.3rem] font-medium "
                       >
-                        <h3 className="-mt-1">1</h3>
+                        <h3 className="">1</h3>
                       </div>
                     </div>{" "}
                     <div
                       // onClick={incrymentQty}
-                      className="disabled 
+                      className=" grid place-items-center
                     cursor-pointer font-semibold "
                     >
-                      +
+                      <BsPlus/>
                     </div>
                   </div>
                   <p
@@ -131,7 +137,7 @@ export default function Minimog({ cartmodal, seCart, Hndlecartmodal }) {
             </div>
 
             <div className="row  bg-[#f7f7f7] absolute bottom-0 left-0 right-0 p-2  justify-center  ">
-              <div className="div md:w-[100%] shadow-lg ">
+              <div className="div md:w-[100%]  ">
                 <table class="border-collapse bg-[#f7f7f7] w-full  table-auto    text-sm">
                   <thead>
                     <tr>
@@ -185,12 +191,16 @@ export default function Minimog({ cartmodal, seCart, Hndlecartmodal }) {
                   </thead>
                   <tbody class="  bg-white dark:bg-slate-800 space-y-4">
                     <tr>
-                      <td class="border-b flex space-x-5 border-slate-100 dark:border-slate-700 pt-4 p-2  text-slate-500 dark:text-slate-400">
+                      <td class="border-b
+                      flex space-x-5
+                       border-slate-100 dark:border-slate-700 pt-4 p-2  text-slate-500 dark:text-slate-400">
                         <h3 className="text-[16px] text-minimog-theme-default-title-color ">
                           Subtotal
                         </h3>
                       </td>
-                      <td class="border-b border-slate-100 dark:border-slate-700 pt-4 p-1 text-slate-500 dark:text-slate-400">
+                      <td class="border-b
+                       border-slate-100
+                        dark:border-slate-700 pt-4 p-1 text-slate-500 dark:text-slate-400">
                         <h3 className="text-[16px] text-black "></h3>
                       </td>
 
@@ -237,8 +247,12 @@ export default function Minimog({ cartmodal, seCart, Hndlecartmodal }) {
                 <input
                   type="button"
                   value="Checkout"
-                  className="w-full bg-minimog-theme-button-bg-color text-minimog-theme-button-title-color p-3 rounded-md"
+                  className="w-full bg-minimog-theme-checkoutbtn-bg-color
+                   text-minimog-theme-button-bg-title-color p-2 rounded-md"
                 />
+                <div className="underline grid place-items-center py-2"><a >
+                  <Link to="/Minimogtheme/mcartpage"> View Cart</Link>
+                 </a></div>
               </div>
             </div>
           </div>
@@ -321,7 +335,7 @@ export default function Minimog({ cartmodal, seCart, Hndlecartmodal }) {
                   <div className="flex space-x-5">
                     <div
                       className="   border-minimog-theme-button-bg-color mt-3
-                   rounded-md bg-minimog-theme-button-bg-color bottom-2 w-[55%]  
+                   rounded-md bg-minimog-theme-default-bg-color bottom-2 w-[55%]
                      px-3 h-[41px]    
                        text-minimog-theme-button-qty-text-color   flex text-xl   leading-9 
                      justify-between text-center   "
@@ -469,7 +483,7 @@ export default function Minimog({ cartmodal, seCart, Hndlecartmodal }) {
                   <input
                     type="button"
                     value="Checkout"
-                    className="w-full bg-minimog-theme-button-bg-color text-minimog-theme-button-title-color p-3 rounded-md"
+                    className="w-full bg-minimog-theme-checkoutbtn-bg-color text-minimog-theme-button-title-color p-3 rounded-md"
                   />
                 </div>
               </div>

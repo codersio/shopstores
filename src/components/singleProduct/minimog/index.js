@@ -15,7 +15,8 @@ import {FaRegEye} from "react-icons/fa";
 import {ImEye} from "react-icons/im";
 import {faArrowLeft, faArrowRight} from "@fortawesome/free-solid-svg-icons";
 import "./animated.scss"
-export default function Minimog({minimog}) {
+import Minimodata from "../../../pages/Minimogtheme/Minimodata.json";
+export default function Minimog({Minimodata}) {
     const [thumbsclick, setThumbs] = useState(0);
     const [tabsd, setTabs] = useState(1);
     return (
@@ -24,7 +25,7 @@ export default function Minimog({minimog}) {
                 <div className="row md:w-[50%] ">
                     <div className="productzoom flex ">
                         <div className="item thmbs w-[25%] space-y-2">
-                            {minimog.productsingleimage.map((imt, idx) => (
+                            {Minimodata.productsingleimage.map((imt, idx) => (
                                 <img
                                     key={idx}
                                     onClick={() => setThumbs(idx)}
@@ -43,16 +44,16 @@ export default function Minimog({minimog}) {
                                 className="animated zoomInRight"
                                 onTouchMove={() => {
                                     const isLeftside = thumbsclick === 0;
-                                    const newSlide = isLeftside ? minimog.productsingleimage.length - 1 : thumbsclick - 1;
+                                    const newSlide = isLeftside ? Minimodata.productsingleimage.length - 1 : thumbsclick - 1;
                                     setThumbs(newSlide)
-                                }} src={minimog.productsingleimage[thumbsclick].image} alt=""/>
+                                }} src={Minimodata.productsingleimage[thumbsclick].image} alt=""/>
 
 
                             <div>
                                 <div
                                     onClick={() => {
                                         const isLeftside = thumbsclick === 0;
-                                        const newSlide = isLeftside ? minimog.productsingleimage.length - 1 : thumbsclick - 1;
+                                        const newSlide = isLeftside ? Minimodata.productsingleimage.length - 1 : thumbsclick - 1;
                                         setThumbs(newSlide)
                                     }}
                                     className="w-[45px] h-[45px] text-[18px]
@@ -65,7 +66,7 @@ export default function Minimog({minimog}) {
                                 <div
 
                                     onClick={() => {
-                                        const rightSlide = thumbsclick === minimog.productsingleimage.length - 1;
+                                        const rightSlide = thumbsclick === Minimodata.productsingleimage.length - 1;
                                         const newSlide = rightSlide ? 0 : thumbsclick + 1
                                         setThumbs(newSlide)
                                     }}
@@ -256,7 +257,7 @@ export default function Minimog({minimog}) {
             </div>
             <div className="mt-6 ">
                 <ul className="flex  space-x-16 border-b ">
-                    {minimog.tabsdes.map((item) => (
+                    {Minimodata.tabsdes.map((item) => (
                         <li
                             onClick={() => setTabs(item.id)}
                             className={
@@ -271,7 +272,7 @@ export default function Minimog({minimog}) {
                 </ul>
 
                 <div className="mt-8">
-                    {minimog.tabsdes.map((des) => (
+                    {Minimodata.tabsdes.map((des) => (
                         <div>
                             {tabsd == des.id ? (
                                 <div className="space-y-5">

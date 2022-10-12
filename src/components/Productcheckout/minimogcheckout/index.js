@@ -69,7 +69,7 @@ export default function Minimogcheckout() {
           </div>
           <div className="country space-y-3">
             <label htmlFor="">Country / Region * </label> <br />
-            <select name="" id="" className="w-full rounded-md text-[#000]">
+            <select name="" id="" className="w-full rounded-md text-[#000] border-[#d2d2d2]">
               <option value="">United State</option>
             </select>
           </div>
@@ -96,7 +96,7 @@ export default function Minimogcheckout() {
               type="text"
               name=""
               placeholder="Town / City"
-              className="w-[100%] border-[#9b9b9b] rounded-md p-"
+              className="w-[100%] border-[#d2d2d2] rounded-md p-"
               id=""
             />
           </div>
@@ -137,7 +137,7 @@ export default function Minimogcheckout() {
                 type="text"
                 name=""
                 placeholder="Email address"
-                className="w-[100%] border-[#9b9b9b] rounded-md p-"
+                className="w-[100%] border-[#d2d2d2] rounded-md p-"
                 id=""
               />
             </div>
@@ -482,7 +482,7 @@ export default function Minimogcheckout() {
           <input
             type="button"
             value="Place Order"
-            className="w-full bg-black p-2 rounded-md text-white text-[14px] font-[700]"
+            className="w-full bg-black p-3 rounded-md text-white text-[14px] font-[700]"
           />
         </div>
       </div>

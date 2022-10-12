@@ -14,6 +14,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../../Font/globalfont.scss";
 import React, { useState } from "react";
 import Minimogcarmodal from "../../productdropdowncart/minimog";
+import {Link} from "gatsby"
 import "./menu.scss";
 import Loginmodal from "../../logincomnent/loginmodal";
 import Minimogsearch from "../../searchmodal/minimogsearchmodal";
@@ -50,11 +51,11 @@ export default function Minimognavbar({ minimog, mainmenu,logmodal,setLogmodal,M
       </div>
       <div className=" md:flex hidden minimog-nav  bg-white p-3 space-x-6 w-full">
         <div className="item">
-          <img
-            className="w-[50%] ml-10"
-            src="https://minimog-4437.kxcdn.com/wp-content/themes/minimog/assets/images/logo/dark-logo.png"
-            alt=""
-          />
+         <Link to="/Minimogtheme/Homepage"> <img
+             className="w-[50%] ml-10"
+             src="https://minimog-4437.kxcdn.com/wp-content/themes/minimog/assets/images/logo/dark-logo.png"
+             alt=""
+         /></Link>
         </div>
         <div className="item text-center text-minimog-theme-menu-title-color  w-[50%] ">
           <div className="nav ">
@@ -65,20 +66,22 @@ export default function Minimognavbar({ minimog, mainmenu,logmodal,setLogmodal,M
               {Minimodata.mainmenu.map((item) => (
                 <li className="dropdown">
                   <p className="flex space-x-1 ">
-                   <span> {item.name}</span> <span><IoIosArrowDown className="mt-1 text-[12px]" /></span>
+                    <Link to="/Minimogtheme/mshopp"><span> {item.name}</span></Link>
+
+                    {/*<span><IoIosArrowDown className="mt-1 text-[12px]" /></span>*/}
                   </p>
-                  <div className="dropdown-menu text-[#666] space-x-80  p-10 w-full left-0 shadow-xl hidden  right-0 bg-white absolute">
-                    {item.submenu &&
-                      item.submenu.map((sub) => (
-                        <div className="item space-y-2 text-center ">
-                          <ul className="space-y-5">
-                            <li>
-                              <a href="">{sub.title}</a>
-                            </li>
-                          </ul>
-                        </div>
-                      ))}
-                  </div>
+                  {/*<div className="dropdown-menu text-[#666] space-x-80  p-10 w-full left-0 shadow-xl hidden  right-0 bg-white absolute">*/}
+                  {/*  {item.submenu &&*/}
+                  {/*    item.submenu.map((sub) => (*/}
+                  {/*      <div className="item space-y-2 text-center ">*/}
+                  {/*        <ul className="space-y-5">*/}
+                  {/*          <li>*/}
+                  {/*            <a href="">{sub.title}</a>*/}
+                  {/*          </li>*/}
+                  {/*        </ul>*/}
+                  {/*      </div>*/}
+                  {/*    ))}*/}
+                  {/*</div>*/}
                 </li>
               ))}
             </ul>

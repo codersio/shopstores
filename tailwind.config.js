@@ -127,6 +127,7 @@ module.exports = {
 
         //MINIMOG THEME STYLE
         "minimog-theme-title-color": "var(--minimog-theme-title-color)",
+        "minimog-theme-checkoutbtn-bg-color": "var(--minimog-theme-checkoutbtn-bg-color)",
         "minimog-theme-menu-icon-number-color":
           "var(--minimog-theme-menu-icon-number-color)",
         "minimog-theme-price-color": "var(--minimog-theme-price-color)",
