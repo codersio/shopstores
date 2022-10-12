@@ -4,11 +4,12 @@ import React, { useState } from "react";
 import "./style.scss";
 import { RiArrowLeftRightFill } from "react-icons/ri";
 import { ImEye } from "react-icons/im";
-export default function Minimogpro({ minimog, twouitem }) {
+import Minimodata from "../../../pages/Minimogtheme/Minimodata.json";
+export default function Minimogpro({ minimog, twouitem,Minimodata }) {
   const [colorproduct, setColorproduct] = useState(1);
   return (
     <>
-      {minimog ? (
+      {Minimodata ? (
         // DYNAMIC WITH PROPS WISE
         <div
           className={
@@ -18,10 +19,10 @@ export default function Minimogpro({ minimog, twouitem }) {
               ? "minimog-product grid grid-cols-2 md:grid-cols-3 font---minimog-theme-font"
               : twouitem == 4
               ? "minimog-product grid grid-cols-2 md:grid-cols-4 font---minimog-theme-font"
-              : "minimog-product grid grid-cols-2 md:grid-cols-4 font---minimog-theme-font"
+              : "minimog-product grid grid-cols-2 md:grid-cols-5 font---minimog-theme-font"
           }
         >
-          {minimog.product.map((item) => (
+          {Minimodata.product.map((item) => (
             <div className="cols-item space-y-3 p-3 ">
               <div
                 className="image overflow-hidden group

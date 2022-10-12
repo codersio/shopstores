@@ -12,7 +12,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-export default function Minimogsearch({ searchmodal, setSearchmodal }) {
+export default function Minimogsearch({ searchmodal, setSearchmodal,logmodal,setLogmodal }) {
   return (
     <div
       className={

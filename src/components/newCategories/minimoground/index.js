@@ -1,7 +1,8 @@
+import React from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-export default function Minimoground({ minimog }) {
+export default function Minimoground({ Minimodata }) {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -20,15 +21,15 @@ export default function Minimoground({ minimog }) {
       breakpoint: { max: 464, min: 0 },
       items: 1,
     },
-  };
+  }
   return (
     <Carousel
       className="roundcateory scroll-container  "
       responsive={responsive}
       arrows={false}
     >
-      {minimog.category.map((item) => (
-        <div className="category-item w-[10rem] space-y-4">
+      {Minimodata.category.map((item,idx) => (
+        <div key={idx} className="category-item w-[10rem] space-y-4">
           <div className="image w-[9rem] rounded-full overflow-hidden m-auto">
             <img
               // className="rounded-full"

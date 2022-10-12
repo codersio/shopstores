@@ -17,10 +17,10 @@ import Minimogcarmodal from "../../productdropdowncart/minimog";
 import "./menu.scss";
 import Loginmodal from "../../logincomnent/loginmodal";
 import Minimogsearch from "../../searchmodal/minimogsearchmodal";
-export default function Minimognavbar({ minimog, mainmenu }) {
+export default function Minimognavbar({ minimog, mainmenu,logmodal,setLogmodal,Minimodata }) {
   const [menubar, setMenubar] = useState(false);
   const [searchmodal, setSearchmodal] = useState(false);
-  const [logmodal, setLogmodal] = useState(false);
+  // const [logmodal, setLogmodal] = useState(false);
   const [cartmodal, seCart] = useState(false);
   const Hndle = () => {
     seCart(!menubar);
@@ -33,7 +33,7 @@ export default function Minimognavbar({ minimog, mainmenu }) {
       <Loginmodal logmodal={logmodal} setLogmodal={setLogmodal} />
       <Minimogsearch
         searchmodal={searchmodal}
-        setSearchmodal={setSearchmodal}
+        setSearchmodal={setSearchmodal} logmodal={logmodal} setLogmodal={setLogmodal}
       />
       <Minimogcarmodal
         cartmodal={cartmodal}
@@ -62,10 +62,10 @@ export default function Minimognavbar({ minimog, mainmenu }) {
               className="flex space-x-8 
             justify-center mt-3 text-[16px] font-[500]"
             >
-              {minimog.mainmenu.map((item) => (
+              {Minimodata.mainmenu.map((item) => (
                 <li className="dropdown">
-                  <p>
-                    {item.name} <IoIosArrowDown className="mt-1 text-[13px]" />
+                  <p className="flex space-x-1 ">
+                   <span> {item.name}</span> <span><IoIosArrowDown className="mt-1 text-[12px]" /></span>
                   </p>
                   <div className="dropdown-menu text-[#666] space-x-80  p-10 w-full left-0 shadow-xl hidden  right-0 bg-white absolute">
                     {item.submenu &&
@@ -86,7 +86,7 @@ export default function Minimognavbar({ minimog, mainmenu }) {
         </div>
         <div className="item  w-[25%] text-[25px] text-minimog-theme-menu-icon-color">
           <div className="mt-3 flex  justify-center space-x-8">
-            <div className="" onClick={() => setLogmodal(!logmodal)}>
+            <div className="grid place-items-center" onClick={() => setLogmodal(!logmodal)}>
               <FaRegUser className="text-[20px]" />
             </div>
             <div className="  " onClick={() => setSearchmodal(!searchmodal)}>
@@ -165,7 +165,7 @@ export default function Minimognavbar({ minimog, mainmenu }) {
             }
           >
             <ul className="space-y-8 justify-center mt-5 text-minimog-theme-menu-title-color">
-              {minimog.mainmenu.map((item) => (
+              {Minimodata.mainmenu.map((item) => (
                 <li className=" dropdown">
                   <a href="">{item.name}</a>
                   <ul className="dropdown-menu">

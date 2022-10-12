@@ -4,7 +4,8 @@ import PropTypes from "prop-types";
 import "./slide.scss"
 import Animate from 'animate.css-react'
 import 'animate.css/animate.css'
-import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 export default function Minimogslider({
   swipeable,
   interval,
@@ -15,34 +16,17 @@ export default function Minimogslider({
   showArrows,
   showIndicators,
   centerMode,
-  minimog,
+  minimog,Minimodata
 }) {
   return (
     <Carousel
-      interval={interval}
-      autoPlay={autoPlay == false ? false : true}
-      centerMode={centerMode == false ? false : true}
-      infiniteLoop={infiniteLoop == false ? false : true}
-      showArrows={showArrows == false ? false : true}
-      showIndicators={showIndicators == false ? false : true}
-      swipeable={swipeable == false ? false : true}
-      showThumbs={showThumbs == true ? true : false}
+        showThumbs={false}
     >
-      {minimog.slider.map((i) => (
-        <div>
+      {Minimodata.slider.map((i) => (
           <img
-            className="w-full  "
-            src={i.image}
+              className="w-full  "
+              src={i.image}
           />
-          <Animate
-
-              appear="fadeInDown"
-              durationAppear={1000}
-              component="div"><h1 className="">
-            An animated element
-          </h1></Animate>
-
-        </div>
       ))}
     </Carousel>
   );
